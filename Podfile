@@ -7,4 +7,8 @@ target 'Postrip' do
 
   # Pods for Postrip
   pod ‘Parse’
+  pod 'PopupDialog', :git => 'https://github.com/Orderella/PopupDialog.git'
+  pod 'ExpandingMenu', :git => 'https://github.com/monoqlo/ExpandingMenu.git'
+  pod 'ImageViewer', :git => 'https://github.com/MailOnline/ImageViewer.git'
+
 end
