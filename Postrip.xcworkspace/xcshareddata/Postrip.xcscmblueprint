@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "23B4272DAD9A5716BA0CBA3320111636C207ED87",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "23B4272DAD9A5716BA0CBA3320111636C207ED87" : 9223372036854775807,
+    "9B26C150DDE2AA0AE562B3B9C6F75131410AD69A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6D724E67-310E-42C1-8655-3BC2B1D53A3C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "23B4272DAD9A5716BA0CBA3320111636C207ED87" : "Postrip\/",
+    "9B26C150DDE2AA0AE562B3B9C6F75131410AD69A" : "Postrip\/tripinstagram\/Postrip\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Postrip",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Postrip.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Ejko007\/BTrippy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "23B4272DAD9A5716BA0CBA3320111636C207ED87"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Ejko007\/Postrip.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B26C150DDE2AA0AE562B3B9C6F75131410AD69A"
+    }
+  ]
+}
