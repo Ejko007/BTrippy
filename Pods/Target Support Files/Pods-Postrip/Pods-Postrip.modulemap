@@ -1,0 +1,6 @@
+framework module Pods_Postrip {
+  umbrella header "Pods-Postrip-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A6769E41EACFA6600F8A080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6769E31EACFA6600F8A080 /* AppDelegate.swift */; };
+		0A6769E61EACFA6600F8A080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6769E51EACFA6600F8A080 /* ViewController.swift */; };
+		0A6769E91EACFA6600F8A080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6769E71EACFA6600F8A080 /* Main.storyboard */; };
+		0A6D77741EAD088700FD8DDD /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D77731EAD088700FD8DDD /* FlagKit.xcassets */; };
+		0A6D77761EAD08A100FD8DDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D77751EAD08A100FD8DDD /* Assets.xcassets */; };
+		0A6D77781EAD08C800FD8DDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6D77771EAD08C800FD8DDD /* LaunchScreen.storyboard */; };
+		0AF179A21EACFD2A00A4DE34 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A01EACFD2A00A4DE34 /* Bolts.framework */; };
+		0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A11EACFD2A00A4DE34 /* Parse.framework */; };
+		909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A6769E01EACFA6600F8A080 /* Postrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6769E31EACFA6600F8A080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A6769E51EACFA6600F8A080 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A6769E81EACFA6600F8A080 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A6769EF1EACFA6600F8A080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A6D77731EAD088700FD8DDD /* FlagKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FlagKit.xcassets; sourceTree = "<group>"; };
+		0A6D77751EAD08A100FD8DDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A6D77771EAD08C800FD8DDD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AF179A01EACFD2A00A4DE34 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		0AF179A11EACFD2A00A4DE34 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.debug.xcconfig"; sourceTree = "<group>"; };
+		B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1D7D8C2C27DE3E3C9468DA /* Pods-Postrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A6769DD1EACFA6600F8A080 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AF179A21EACFD2A00A4DE34 /* Bolts.framework in Frameworks */,
+				0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */,
+				909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A6769D71EACFA6600F8A080 = {
+			isa = PBXGroup;
+			children = (
+				0A6769E21EACFA6600F8A080 /* Postrip */,
+				0A6769E11EACFA6600F8A080 /* Products */,
+				BD96DA1CE736116ABFE80913 /* Pods */,
+				AFD272B7EFF0BC840D79E565 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A6769E11EACFA6600F8A080 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A6769E01EACFA6600F8A080 /* Postrip.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A6769E21EACFA6600F8A080 /* Postrip */ = {
+			isa = PBXGroup;
+			children = (
+				0A6769E31EACFA6600F8A080 /* AppDelegate.swift */,
+				0A6769E51EACFA6600F8A080 /* ViewController.swift */,
+				0A6769E71EACFA6600F8A080 /* Main.storyboard */,
+				0A6D77731EAD088700FD8DDD /* FlagKit.xcassets */,
+				0A6D77751EAD08A100FD8DDD /* Assets.xcassets */,
+				0A6D77771EAD08C800FD8DDD /* LaunchScreen.storyboard */,
+				0A6769EF1EACFA6600F8A080 /* Info.plist */,
+			);
+			path = Postrip;
+			sourceTree = "<group>";
+		};
+		AFD272B7EFF0BC840D79E565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AF179A01EACFD2A00A4DE34 /* Bolts.framework */,
+				0AF179A11EACFD2A00A4DE34 /* Parse.framework */,
+				B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD96DA1CE736116ABFE80913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */,
+				EC1D7D8C2C27DE3E3C9468DA /* Pods-Postrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A6769DF1EACFA6600F8A080 /* Postrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A6769F21EACFA6600F8A080 /* Build configuration list for PBXNativeTarget "Postrip" */;
+			buildPhases = (
+				4278345CB2C826F3BEF8AEF4 /* [CP] Check Pods Manifest.lock */,
+				0A6769DC1EACFA6600F8A080 /* Sources */,
+				0A6769DD1EACFA6600F8A080 /* Frameworks */,
+				0A6769DE1EACFA6600F8A080 /* Resources */,
+				7056A9A07D7753D7658D2F06 /* [CP] Embed Pods Frameworks */,
+				273028BCF5E270FB94C39490 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Postrip;
+			productName = Postrip;
+			productReference = 0A6769E01EACFA6600F8A080 /* Postrip.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A6769D81EACFA6600F8A080 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Pavol Polacek";
+				TargetAttributes = {
+					0A6769DF1EACFA6600F8A080 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RXJ28CS78E;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0A6769DB1EACFA6600F8A080 /* Build configuration list for PBXProject "Postrip" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A6769D71EACFA6600F8A080;
+			productRefGroup = 0A6769E11EACFA6600F8A080 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A6769DF1EACFA6600F8A080 /* Postrip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A6769DE1EACFA6600F8A080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6D77741EAD088700FD8DDD /* FlagKit.xcassets in Resources */,
+				0A6D77781EAD08C800FD8DDD /* LaunchScreen.storyboard in Resources */,
+				0A6D77761EAD08A100FD8DDD /* Assets.xcassets in Resources */,
+				0A6769E91EACFA6600F8A080 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		273028BCF5E270FB94C39490 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Postrip/Pods-Postrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4278345CB2C826F3BEF8AEF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7056A9A07D7753D7658D2F06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Postrip/Pods-Postrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A6769DC1EACFA6600F8A080 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6769E61EACFA6600F8A080 /* ViewController.swift in Sources */,
+				0A6769E41EACFA6600F8A080 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A6769E71EACFA6600F8A080 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A6769E81EACFA6600F8A080 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A6769F01EACFA6600F8A080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A6769F11EACFA6600F8A080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A6769F31EACFA6600F8A080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RXJ28CS78E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
+				INFOPLIST_FILE = Postrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ejko.cz.Postrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0A6769F41EACFA6600F8A080 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1D7D8C2C27DE3E3C9468DA /* Pods-Postrip.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RXJ28CS78E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
+				);
+				INFOPLIST_FILE = Postrip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ejko.cz.Postrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A6769DB1EACFA6600F8A080 /* Build configuration list for PBXProject "Postrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6769F01EACFA6600F8A080 /* Debug */,
+				0A6769F11EACFA6600F8A080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A6769F21EACFA6600F8A080 /* Build configuration list for PBXNativeTarget "Postrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6769F31EACFA6600F8A080 /* Debug */,
+				0A6769F41EACFA6600F8A080 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A6769D81EACFA6600F8A080 /* Project object */;
+}
