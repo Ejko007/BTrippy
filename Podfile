@@ -6,9 +6,13 @@ target 'Postrip' do
   use_frameworks!
 
   # Pods for Postrip
+  
   pod ‘Parse’
   pod 'PopupDialog', :git => 'https://github.com/Orderella/PopupDialog.git'
   pod 'ExpandingMenu', :git => 'https://github.com/monoqlo/ExpandingMenu.git'
   pod 'ImageViewer', :git => 'https://github.com/MailOnline/ImageViewer.git'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
 
 end

@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import UserNotifications
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // light status bar
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
+        // Parse configuration
         let parseConfig = ParseClientConfiguration { (ParseMutableClientConfiguration) in            
             ParseMutableClientConfiguration.applicationId = "giMy5zrPdxGS6K7n63F8zbZKc7dAPc8bCmOG4G94"
             ParseMutableClientConfiguration.clientKey = "Xm3Cw5nCLP2SUd59TSXgs3hbG9GcbiH8RfCP4dA7"
@@ -27,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.enableLocalDatastore()
         Parse.initialize(with: parseConfig)
+        
+        // Facebook configuration
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         //call login function
         login()
@@ -68,6 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let sourceApplication : String? = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: nil)
     }
 
     func login() {

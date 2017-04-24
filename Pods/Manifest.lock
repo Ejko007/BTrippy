@@ -1,6 +1,17 @@
 PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
   - ExpandingMenu (0.3.1)
+  - FBSDKCoreKit (4.22.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.22.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.22.0):
+    - FBSDKCoreKit
   - ImageViewer (4.0)
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
@@ -8,6 +19,9 @@ PODS:
 
 DEPENDENCIES:
   - ExpandingMenu (from `https://github.com/monoqlo/ExpandingMenu.git`)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - ImageViewer (from `https://github.com/MailOnline/ImageViewer.git`)
   - Parse
   - PopupDialog (from `https://github.com/Orderella/PopupDialog.git`)
@@ -34,10 +48,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
+  FBSDKCoreKit: c693bad19feb225469eeff14452ba364522ee48b
+  FBSDKLoginKit: 1fa529fc622d7b32ebeaffbecd377180833c6d30
+  FBSDKShareKit: 21ab3c8d173f4fa20c47c1061f3a9fac5950b5fa
   ImageViewer: 364abc0309c33dda86d08ca25b0243e5c67d8cd3
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   PopupDialog: 2993779aa88470585f4e9c3f240382ea82f98ef0
 
-PODFILE CHECKSUM: b207b2a4dd5b3305c4484f9ae5583bd25fb4cdd4
+PODFILE CHECKSUM: f58a70aeaf115287b428f9debceaa9e0c65e19c2
 
 COCOAPODS: 1.2.1

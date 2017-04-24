@@ -15,6 +15,9 @@
 		0A0070BE1EADEF7200CFBB84 /* localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070BD1EADEF7200CFBB84 /* localization.swift */; };
 		0A0070C11EADF1A900CFBB84 /* navVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070BF1EADF1A900CFBB84 /* navVC.swift */; };
 		0A0070C21EADF1A900CFBB84 /* tabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070C01EADF1A900CFBB84 /* tabbarVC.swift */; };
+		0A0070C51EAE0AE400CFBB84 /* quantityTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070C31EAE0AE400CFBB84 /* quantityTVC.swift */; };
+		0A0070C61EAE0AE400CFBB84 /* quantityLevelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070C41EAE0AE400CFBB84 /* quantityLevelTVC.swift */; };
+		0A0070C91EAE0BCA00CFBB84 /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070C81EAE0BCA00CFBB84 /* resetPasswordVC.swift */; };
 		0A6769E41EACFA6600F8A080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6769E31EACFA6600F8A080 /* AppDelegate.swift */; };
 		0A6769E61EACFA6600F8A080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6769E51EACFA6600F8A080 /* ViewController.swift */; };
 		0A6769E91EACFA6600F8A080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A6769E71EACFA6600F8A080 /* Main.storyboard */; };
@@ -79,6 +82,9 @@
 		0A0070BD1EADEF7200CFBB84 /* localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localization.swift; sourceTree = "<group>"; };
 		0A0070BF1EADF1A900CFBB84 /* navVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navVC.swift; sourceTree = "<group>"; };
 		0A0070C01EADF1A900CFBB84 /* tabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabbarVC.swift; sourceTree = "<group>"; };
+		0A0070C31EAE0AE400CFBB84 /* quantityTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quantityTVC.swift; sourceTree = "<group>"; };
+		0A0070C41EAE0AE400CFBB84 /* quantityLevelTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quantityLevelTVC.swift; sourceTree = "<group>"; };
+		0A0070C81EAE0BCA00CFBB84 /* resetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		0A6769E01EACFA6600F8A080 /* Postrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6769E31EACFA6600F8A080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A6769E51EACFA6600F8A080 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 		0A0070B41EADECDA00CFBB84 /* SignInUp */ = {
 			isa = PBXGroup;
 			children = (
+				0A0070C81EAE0BCA00CFBB84 /* resetPasswordVC.swift */,
 				0A0070B01EADECA900CFBB84 /* singInVC.swift */,
 				0A0070B11EADECA900CFBB84 /* signUPVC.swift */,
 			);
@@ -179,6 +186,15 @@
 				0A0070BA1EADEECA00CFBB84 /* currenciesTVC.swift */,
 			);
 			name = Currencies;
+			sourceTree = "<group>";
+		};
+		0A0070C71EAE0AF200CFBB84 /* Quant&Levels */ = {
+			isa = PBXGroup;
+			children = (
+				0A0070C31EAE0AE400CFBB84 /* quantityTVC.swift */,
+				0A0070C41EAE0AE400CFBB84 /* quantityLevelTVC.swift */,
+			);
+			name = "Quant&Levels";
 			sourceTree = "<group>";
 		};
 		0A6769D71EACFA6600F8A080 = {
@@ -207,6 +223,7 @@
 				0A0070B41EADECDA00CFBB84 /* SignInUp */,
 				0A0070B91EADEE5900CFBB84 /* Countries */,
 				0A0070BC1EADEEE400CFBB84 /* Currencies */,
+				0A0070C71EAE0AF200CFBB84 /* Quant&Levels */,
 				0A0070BF1EADF1A900CFBB84 /* navVC.swift */,
 				0A0070C01EADF1A900CFBB84 /* tabbarVC.swift */,
 				0A6769E31EACFA6600F8A080 /* AppDelegate.swift */,
@@ -506,6 +523,7 @@
 				0AADD1FB1EAD12B100D24799 /* IsoCountryCodes.swift in Sources */,
 				0AADD25B1EAD149500D24799 /* CounterView.swift in Sources */,
 				0A0070B71EADEE2700CFBB84 /* countriesCell.swift in Sources */,
+				0A0070C51EAE0AE400CFBB84 /* quantityTVC.swift in Sources */,
 				0AADD24B1EAD13A400D24799 /* VideoViewController.swift in Sources */,
 				0AADD2281EAD13A400D24799 /* BlurView.swift in Sources */,
 				0AADD23F1EAD13A400D24799 /* ImageFadeInHandler.swift in Sources */,
@@ -536,7 +554,9 @@
 				0AADD24A1EAD13A400D24799 /* VideoView.swift in Sources */,
 				0AADD2491EAD13A400D24799 /* VideoScrubber.swift in Sources */,
 				0AADD22F1EAD13A400D24799 /* CGSize.swift in Sources */,
+				0A0070C61EAE0AE400CFBB84 /* quantityLevelTVC.swift in Sources */,
 				0AADD2371EAD13A400D24799 /* GalleryConfiguration.swift in Sources */,
+				0A0070C91EAE0BCA00CFBB84 /* resetPasswordVC.swift in Sources */,
 				0AADD2341EAD13A400D24799 /* UISlider.swift in Sources */,
 				0AADD2441EAD13A400D24799 /* LayoutEnums.swift in Sources */,
 				0A6769E61EACFA6600F8A080 /* ViewController.swift in Sources */,

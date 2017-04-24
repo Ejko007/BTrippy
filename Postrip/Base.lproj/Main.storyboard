@@ -272,6 +272,107 @@
             </objects>
             <point key="canvasLocation" x="186.25" y="151.18666666666667"/>
         </scene>
+        <!--QuantityTVC-->
+        <scene sceneID="JUq-bN-iEP">
+            <objects>
+                <tableViewController storyboardIdentifier="quantityTVC" id="yOj-Uo-GFY" customClass="quantityTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JWi-zJ-rdT">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPersonsNr" textLabel="ucN-qG-Jdu" style="IBUITableViewCellStyleDefault" id="gZd-XJ-HLW">
+                                <rect key="frame" x="0.0" y="28" width="70" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gZd-XJ-HLW" id="RM8-x3-TZX">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucN-qG-Jdu">
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPersonsNrTenPlus" textLabel="rUx-St-Mdl" style="IBUITableViewCellStyleDefault" id="by7-fn-7VH">
+                                <rect key="frame" x="0.0" y="72" width="70" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="by7-fn-7VH" id="pu5-ji-laq">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="10+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rUx-St-Mdl">
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yOj-Uo-GFY" id="DHS-8D-1Tw"/>
+                            <outlet property="delegate" destination="yOj-Uo-GFY" id="1bG-B2-I5s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0G7-lv-7Jt"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="70" height="450"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="70" height="450"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XmM-86-mB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-739"/>
+        </scene>
+        <!--Quantity LevelTVC-->
+        <scene sceneID="VR5-bl-VBP">
+            <objects>
+                <tableViewController storyboardIdentifier="quantityLevelTVC" id="3iO-NG-7uG" customClass="quantityLevelTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UvK-YR-brZ">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellLevelsNr" textLabel="cuI-cb-7EU" style="IBUITableViewCellStyleDefault" id="fOu-Wd-FxH">
+                                <rect key="frame" x="0.0" y="28" width="70" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOu-Wd-FxH" id="p8w-iq-B4m">
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cuI-cb-7EU">
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3iO-NG-7uG" id="kFV-1y-6bE"/>
+                            <outlet property="delegate" destination="3iO-NG-7uG" id="qpE-mc-wms"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="IWZ-w9-kmx"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="70" height="450"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="70" height="450"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W32-4i-pp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="-739"/>
+        </scene>
     </scenes>
     <resources>
         <image name="default-avatar" width="128" height="128"/>

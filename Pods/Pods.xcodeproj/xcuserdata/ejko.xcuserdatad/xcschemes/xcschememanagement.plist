@@ -19,6 +19,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ImageViewer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>69B637F1C409E8B4E8EC68166FCCED75</key>
+		<key>27ECFDA6D0B0C91E35DF0D79FC1B06E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44CAD6CE523055ED339E87154473A254</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>474FAA8EA95C24528175BBA288DA0CD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E47318810D64126A49F307CCDC198746</key>
+		<key>BC5000D645EEAF961C85907CDC796FE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEF7E6E85DB5CDE5D7A18F4F2EB8494B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E396A93E4C79B22B7816E9F02F62ECED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>EB3C30C12812E277147F8CAC42660691</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F957EABCA56BD8F5B626798CC7B344D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
