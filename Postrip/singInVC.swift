@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import PopupDialog
+import ParseFacebookUtilsV4
 
 class singInVC: UIViewController {
     
@@ -20,9 +21,12 @@ class singInVC: UIViewController {
     @IBOutlet weak var signInBtn: UIButton!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var forgotBtn: UIButton!
+    @IBOutlet weak var facebookBtn: UIButton!
+    @IBOutlet weak var twitterBtn: UIButton!
+    @IBOutlet weak var otherLbl: UILabel!
+    @IBOutlet weak var otherLoginOptionsView: UIView!
+    @IBOutlet weak var signincocialImg: UIImageView!
     
-    
-
     // default function
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,31 @@ class singInVC: UIViewController {
         signInBtn.layer.cornerRadius = signInBtn.frame.size.width / 20
         signUpBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 3 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.size.width / 3, height: 30)
         signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 20
+        
+        otherLoginOptionsView.layer.borderWidth = 1
+        otherLoginOptionsView.layer.borderColor = UIColor.white.cgColor
+        otherLoginOptionsView.layer.cornerRadius = otherLoginOptionsView.frame.size.width / 50
+        otherLoginOptionsView.frame = CGRect(x: 10, y: signInBtn.frame.origin.y + 100, width: self.view.frame.size.width - 20, height: 100)
+        otherLoginOptionsView.backgroundColor = UIColor.clear
+        
+        facebookBtn.layer.cornerRadius = facebookBtn.frame.size.width / 20
+        facebookBtn.frame = CGRect(x: 10, y: 60, width: self.view.frame.size.width / 3, height: 30)
+        
+        twitterBtn.layer.cornerRadius = twitterBtn.frame.size.width / 20
+        twitterBtn.frame = CGRect(x: otherLoginOptionsView.frame.size.width - otherLoginOptionsView.frame.size.width / 3 - 20, y: 60, width: self.view.frame.size.width / 3, height: 30)
+ 
+        signincocialImg.frame = CGRect(x: self.view.frame.size.width / 2 - 60, y: -50, width: 100, height: 100)
+        signincocialImg.layer.cornerRadius = signincocialImg.frame.height / 2
+        signincocialImg.clipsToBounds = true
+        _ = signincocialImg.image?.imageWithColor(tintColor: UIColor.red.withAlphaComponent(0.3))
+        
+        otherLbl.textColor = UIColor.white
+        otherLbl.text = or_use_str
+        otherLbl.frame = CGRect(x: 0, y: 0, width: 120, height: 20)
+ 
+        otherLoginOptionsView.addSubview(signincocialImg)
+        otherLoginOptionsView.addSubview(facebookBtn)
+        otherLoginOptionsView.addSubview(twitterBtn)
     
         // tap to hide keyboard
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(recognizer:)))
@@ -101,4 +130,163 @@ class singInVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func facebookBtn_tapped(_ sender: UIButton) {
+        
+        PFFacebookUtils.logInInBackground(withReadPermissions: ["public_profile","email"]) { (user: PFUser?, error: Error?) in
+            
+            if(error != nil) {
+                //Display an alert message
+                let myAlert = UIAlertController(title:"Alert", message:error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert);
+                
+                let okAction =  UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+                
+                myAlert.addAction(okAction);
+                self.present(myAlert, animated:true, completion:nil);
+                
+                return
+            }
+            
+            print(user!)
+            print("Current user token=\(FBSDKAccessToken.current().tokenString)")
+            print("Current user id \(FBSDKAccessToken.current().userID)")
+            
+            // --------------------------
+            
+            // facebook login management
+            let requestParameters = ["fields": "id, email, first_name, last_name, gender, name, picture.type(large)"]
+            let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: requestParameters)
+            graphRequest.start(completionHandler: { (connection, result, error: Error?) -> Void in
+                if error != nil {
+                    print(error!.localizedDescription)
+                    return
+                }
+                if result != nil {
+                
+                    guard let result = result as? NSDictionary,
+                        let email = result["email"] as? String!,
+                        let user_name = result["name"] as? String!,
+                        let first_name = result["first_name"] as? String!,
+                        let last_name = result["last_name"] as? String!,
+                        let user_gender = result["gender"] as? String!,
+                        let user_id_fb = result["id"] as? String!
+                        else {
+                            return
+                    }
+                    
+                    print(email)
+                    print(user_name)
+                    print(first_name)
+                    print(last_name)
+                    print(user_gender)
+                    print(user_id_fb)
+                    
+                    let myUser:PFUser = PFUser.current()!
+                    
+                    // Save first name
+                    if first_name != nil {
+                        myUser.setObject(first_name, forKey: "first_name")
+                    }
+                    
+                    // Save last name
+                    if last_name != nil {
+                        myUser.setObject(last_name, forKey: "last_name")
+                    }
+                    
+                    // Save email address
+                    if email != nil {
+                        myUser.setObject(email, forKey: "email")
+                    }
+                    
+                    // Save gender
+                    if user_gender != nil {
+                        myUser.setObject(user_gender, forKey: "gender")
+                    }
+                    
+                    // Save fullname
+                    if (first_name != nil) && (last_name != nil) {
+                        myUser.setObject(first_name.lowercased() + " " + last_name.lowercased(), forKey: "fullname")
+                    }
+                    
+                    // get the localized country name (in my case, it's US English)
+                    let englishLocale : NSLocale = NSLocale.init(localeIdentifier :  "en_US")
+                    
+                    // get the current locale
+                    let currentLocale = NSLocale.current
+                    
+                    let theEnglishName : String? = englishLocale.displayName(forKey: NSLocale.Key.identifier, value: currentLocale.identifier)
+                    
+                    var countryName = String()
+                    if let theEnglishName = theEnglishName {
+                        countryName = theEnglishName.slice(from: "(", to: ")")!
+                        print("the localized country name is \(String(describing: countryName))")
+                    }
+                    let currency = IsoCountryCodes.searchByName(name: countryName).currency
+                    print("Currency is " + currency)
+                    if countryName.isEmpty {
+                        myUser.setObject("CZK", forKey: "currencyBase")
+                    } else {
+                        myUser.setObject(currency, forKey: "currencyBase")
+                    }
+                    
+                    DispatchQueue.global(qos: .userInitiated).async {
+
+                        // Get Facebook profile picture
+                        let userProfile = "https://graph.facebook.com/" + user_id_fb + "/picture?type=large"
+                        let userProfilePictureURL = URL(string: userProfile)
+                        let userProfilePictureData = NSData(contentsOf: userProfilePictureURL!)
+                        if userProfilePictureData != nil {
+                            let avaImage = UIImage(data: userProfilePictureData! as Data)
+                            let avaData = UIImageJPEGRepresentation(avaImage!, 0.5)
+                            let avaFile = PFFile(name: "ava.jpg", data: avaData!)
+                            myUser.setObject(avaFile!, forKey: "ava")
+                        }
+                        
+                        myUser.saveInBackground(block: { (success: Bool, error: Error?) in
+                            if error == nil {
+                                
+                                // User details are updated from Facebook
+                                if success {
+                                    
+                                    
+                                    
+                                    
+                                    
+                                }
+                                
+                            } else {
+                                print(error!.localizedDescription)
+                            }
+                        })
+                    }
+                }
+           })
+
+            
+            
+            
+            
+            
+            // --------------------------
+            
+            if(FBSDKAccessToken.current() != nil) {
+                let protectedPage = self.storyboard?.instantiateViewController(withIdentifier: "ProtectedPageViewController") as! navVC
+                
+                let protectedPageNav = UINavigationController(rootViewController: protectedPage)
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                appDelegate.window?.rootViewController = protectedPageNav
+                
+            }
+        }
+    }
+    
+    @IBAction func twitterBtn_tapped(_ sender: UIButton) {
+        
+        
+    }
+    
+    
 }
+

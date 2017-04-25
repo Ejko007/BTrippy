@@ -12,7 +12,7 @@
         <!--Sing InVC-->
         <scene sceneID="TPC-Kp-aGb">
             <objects>
-                <viewController storyboardIdentifier="singInVC" id="TjG-W6-ZY3" customClass="singInVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="singInVC" id="TjG-W6-ZY3" customClass="singInVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iVE-B7-H8l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,27 +74,74 @@
                                     <segue destination="HCa-Du-JCW" kind="modal" identifier="SignUPVC" id="iEY-uy-mdH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="voU-Tv-dO6">
+                                <rect key="frame" x="103" y="392" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" id="Dlx-vE-dIz">
+                                <rect key="frame" x="17" y="455" width="342" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h91-ja-IML">
+                                        <rect key="frame" x="18" y="105" width="132" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="facebookBtn_tapped:" destination="TjG-W6-ZY3" eventType="touchUpInside" id="Ynw-WU-dfk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T7C-mB-bAg">
+                                        <rect key="frame" x="217" y="105" width="105" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Twitter">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="twitterBtn_tapped:" destination="TjG-W6-ZY3" eventType="touchUpInside" id="LFm-M6-1rG"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="signin_social" id="nB2-6r-ZnV">
+                                        <rect key="frame" x="111" y="-36" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="QIp-cV-6aq"/>
                     <connections>
+                        <outlet property="facebookBtn" destination="h91-ja-IML" id="T1g-K2-WFn"/>
                         <outlet property="forgotBtn" destination="aA6-YL-hri" id="3Lz-Da-Tzj"/>
                         <outlet property="label" destination="DZs-na-oe5" id="FLT-yk-s2C"/>
+                        <outlet property="otherLbl" destination="voU-Tv-dO6" id="Rcm-b6-8mO"/>
+                        <outlet property="otherLoginOptionsView" destination="Dlx-vE-dIz" id="Zri-Ib-Wna"/>
                         <outlet property="passwordTxt" destination="n0W-zZ-4zk" id="fN7-8H-LoJ"/>
                         <outlet property="signInBtn" destination="Z9e-LM-tJW" id="PW6-Xh-hKT"/>
                         <outlet property="signUpBtn" destination="Jul-06-Ohk" id="L0B-Id-TiC"/>
+                        <outlet property="signincocialImg" destination="nB2-6r-ZnV" id="meX-fS-v0H"/>
+                        <outlet property="twitterBtn" destination="T7C-mB-bAg" id="AG4-PL-Ghd"/>
                         <outlet property="usernameTxt" destination="yfF-OX-aYg" id="9ON-bE-TuQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHu-yq-IZ8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322.5" y="152.29833333333332"/>
+            <point key="canvasLocation" x="-322.5" y="151.5"/>
         </scene>
         <!--SignUPVC-->
         <scene sceneID="ATb-X5-fDC">
             <objects>
-                <viewController id="HCa-Du-JCW" customClass="signUPVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCa-Du-JCW" customClass="signUPVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4be-ak-nLZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +270,7 @@
         <!--Reset PasswordVC-->
         <scene sceneID="c6m-Vz-Ztn">
             <objects>
-                <viewController id="mrB-Fz-u47" customClass="resetPasswordVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mrB-Fz-u47" customClass="resetPasswordVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Xl-In-kOo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +322,7 @@
         <!--QuantityTVC-->
         <scene sceneID="JUq-bN-iEP">
             <objects>
-                <tableViewController storyboardIdentifier="quantityTVC" id="yOj-Uo-GFY" customClass="quantityTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="quantityTVC" id="yOj-Uo-GFY" customClass="quantityTVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JWi-zJ-rdT">
                         <rect key="frame" x="0.0" y="0.0" width="70" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +336,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucN-qG-Jdu">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -306,7 +353,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="10+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rUx-St-Mdl">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -334,7 +381,7 @@
         <!--Quantity LevelTVC-->
         <scene sceneID="VR5-bl-VBP">
             <objects>
-                <tableViewController storyboardIdentifier="quantityLevelTVC" id="3iO-NG-7uG" customClass="quantityLevelTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="quantityLevelTVC" id="3iO-NG-7uG" customClass="quantityLevelTVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UvK-YR-brZ">
                         <rect key="frame" x="0.0" y="0.0" width="70" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +395,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cuI-cb-7EU">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -373,9 +420,73 @@
             </objects>
             <point key="canvasLocation" x="177" y="-739"/>
         </scene>
+        <!--CurrenciesTVC-->
+        <scene sceneID="phe-tE-cjK">
+            <objects>
+                <tableViewController storyboardIdentifier="currenciesTVC" id="dOb-ai-pKI" customClass="currenciesTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vy1-p5-jN7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellCountry" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" id="FzZ-th-ly1" customClass="countriesCell" customModule="tripinstagram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FzZ-th-ly1" id="xNh-cK-YSc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WW" id="mJ3-pp-S8g">
+                                            <rect key="frame" x="8" y="0.0" width="68" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" id="dPL-Vl-6sC">
+                                            <rect key="frame" x="99" y="-11" width="268" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1En-h8-24z">
+                                            <rect key="frame" x="99" y="15" width="268" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryCodeLbl" destination="1En-h8-24z" id="VuQ-hq-QRI"/>
+                                    <outlet property="countryImg" destination="mJ3-pp-S8g" id="DIY-ID-acH"/>
+                                    <outlet property="countryNameLbl" destination="dPL-Vl-6sC" id="u4m-by-5Bq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dOb-ai-pKI" id="awj-Tj-V8y"/>
+                            <outlet property="delegate" destination="dOb-ai-pKI" id="nUc-vD-0fN"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="70S-pE-HYS">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Kfj-p9-M2S"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="r6O-H5-n8q"/>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYz-Ob-YBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="-675"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="WW" width="23" height="17"/>
         <image name="default-avatar" width="128" height="128"/>
+        <image name="signin_social" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

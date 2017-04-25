@@ -184,6 +184,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 As of April 5, 2017, Parse, LLC has transferred this code to the parse-community organization, and will no longer be contributing to or distributing this code. 
 
 
+## ParseFacebookUtilsV4
+
+See https://www.parse.com/about/terms
+
 ## PopupDialog
 
 Copyright (c) 2016 Orderella Ltd. (http://orderella.co.uk)

@@ -15,6 +15,12 @@ PODS:
   - ImageViewer (4.0)
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
+  - ParseFacebookUtilsV4 (1.11.1):
+    - Bolts/Tasks (>= 1.6)
+    - FBSDKCoreKit (~> 4.10)
+    - FBSDKLoginKit (~> 4.10)
+    - FBSDKTVOSKit (~> 4.10)
+    - Parse (~> 1.12)
   - PopupDialog (0.5.4)
 
 DEPENDENCIES:
@@ -24,6 +30,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - ImageViewer (from `https://github.com/MailOnline/ImageViewer.git`)
   - Parse
+  - ParseFacebookUtilsV4
   - PopupDialog (from `https://github.com/Orderella/PopupDialog.git`)
 
 EXTERNAL SOURCES:
@@ -53,8 +60,9 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 21ab3c8d173f4fa20c47c1061f3a9fac5950b5fa
   ImageViewer: 364abc0309c33dda86d08ca25b0243e5c67d8cd3
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
+  ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   PopupDialog: 2993779aa88470585f4e9c3f240382ea82f98ef0
 
-PODFILE CHECKSUM: f58a70aeaf115287b428f9debceaa9e0c65e19c2
+PODFILE CHECKSUM: 1cfaaa133a86e17fc742efd5753b61ce7e5dd019
 
 COCOAPODS: 1.2.1

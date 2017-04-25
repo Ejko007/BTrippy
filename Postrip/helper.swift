@@ -156,6 +156,7 @@ extension Double {
     }
 }
 
+
 extension UIImage {
     func imageResize (sizeChange:CGSize)-> UIImage{
         
@@ -167,6 +168,16 @@ extension UIImage {
         
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         return scaledImage!
+    }
+    func imageWithColor(tintColor: UIColor) -> UIImage {
+        
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+        tintColor.setFill()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
 }
 
@@ -182,5 +193,14 @@ extension UIView {
         }, completion: completion)}
 }
 
+extension String {
+    func slice(from: String, to: String) -> String? {
+        return (range(of: from)?.upperBound).flatMap { substringFrom in
+            (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
+                substring(with: substringFrom..<substringTo)
+            }
+        }
+    }
+}
 
 

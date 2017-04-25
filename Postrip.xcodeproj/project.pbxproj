@@ -188,13 +188,13 @@
 			name = Currencies;
 			sourceTree = "<group>";
 		};
-		0A0070C71EAE0AF200CFBB84 /* Quant&Levels */ = {
+		0A0070C71EAE0AF200CFBB84 /* Quantities&Levels */ = {
 			isa = PBXGroup;
 			children = (
 				0A0070C31EAE0AE400CFBB84 /* quantityTVC.swift */,
 				0A0070C41EAE0AE400CFBB84 /* quantityLevelTVC.swift */,
 			);
-			name = "Quant&Levels";
+			name = "Quantities&Levels";
 			sourceTree = "<group>";
 		};
 		0A6769D71EACFA6600F8A080 = {
@@ -223,7 +223,7 @@
 				0A0070B41EADECDA00CFBB84 /* SignInUp */,
 				0A0070B91EADEE5900CFBB84 /* Countries */,
 				0A0070BC1EADEEE400CFBB84 /* Currencies */,
-				0A0070C71EAE0AF200CFBB84 /* Quant&Levels */,
+				0A0070C71EAE0AF200CFBB84 /* Quantities&Levels */,
 				0A0070BF1EADF1A900CFBB84 /* navVC.swift */,
 				0A0070C01EADF1A900CFBB84 /* tabbarVC.swift */,
 				0A6769E31EACFA6600F8A080 /* AppDelegate.swift */,

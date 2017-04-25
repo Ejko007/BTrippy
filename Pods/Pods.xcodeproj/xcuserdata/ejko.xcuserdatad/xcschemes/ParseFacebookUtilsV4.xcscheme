@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '10EE0F117423A7676B8C1E144BC2B486'
-               BlueprintName = 'PopupDialog'
+               BlueprintIdentifier = '2A52779AA0BD86BA0CEB8753126ED2FE'
+               BlueprintName = 'ParseFacebookUtilsV4'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PopupDialog.framework'>
+               BuildableName = 'ParseFacebookUtilsV4.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
