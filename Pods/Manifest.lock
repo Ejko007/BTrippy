@@ -24,7 +24,7 @@ PODS:
   - PopupDialog (0.5.4)
 
 DEPENDENCIES:
-  - ExpandingMenu (from `https://github.com/monoqlo/ExpandingMenu.git`)
+  - ExpandingMenu (~> 0.3)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -34,17 +34,12 @@ DEPENDENCIES:
   - PopupDialog (from `https://github.com/Orderella/PopupDialog.git`)
 
 EXTERNAL SOURCES:
-  ExpandingMenu:
-    :git: https://github.com/monoqlo/ExpandingMenu.git
   ImageViewer:
     :git: https://github.com/MailOnline/ImageViewer.git
   PopupDialog:
     :git: https://github.com/Orderella/PopupDialog.git
 
 CHECKOUT OPTIONS:
-  ExpandingMenu:
-    :commit: 09783bb43f3c9ce3c6fcf9ccda29f04eac791864
-    :git: https://github.com/monoqlo/ExpandingMenu.git
   ImageViewer:
     :commit: 1f4f5a128701ca945fd07efac710341bb4f80695
     :git: https://github.com/MailOnline/ImageViewer.git
@@ -63,6 +58,6 @@ SPEC CHECKSUMS:
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   PopupDialog: 2993779aa88470585f4e9c3f240382ea82f98ef0
 
-PODFILE CHECKSUM: 1cfaaa133a86e17fc742efd5753b61ce7e5dd019
+PODFILE CHECKSUM: 015e71703e6e5e351083b08ef6c0d9f2932479ce
 
 COCOAPODS: 1.2.1

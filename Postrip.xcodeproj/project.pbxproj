@@ -37,15 +37,6 @@
 		0A0070EB1EAF866E00CFBB84 /* commentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070E91EAF866E00CFBB84 /* commentCell.swift */; };
 		0A0070ED1EAF86B100CFBB84 /* uploadEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070EC1EAF86B100CFBB84 /* uploadEditVC.swift */; };
 		0A0070EF1EAF872C00CFBB84 /* tripMapMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070EE1EAF872C00CFBB84 /* tripMapMasterVC.swift */; };
-		0A0070FF1EAF8BE300CFBB84 /* ExpandingMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070F01EAF8BE300CFBB84 /* ExpandingMenuButton.swift */; };
-		0A0071001EAF8BE300CFBB84 /* ExpandingMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070F11EAF8BE300CFBB84 /* ExpandingMenuItem.swift */; };
-		0A0071011EAF8BE300CFBB84 /* expanding.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070F21EAF8BE300CFBB84 /* expanding.caf */; };
-		0A0071021EAF8BE300CFBB84 /* fold.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070F31EAF8BE300CFBB84 /* fold.caf */; };
-		0A0071031EAF8BE300CFBB84 /* selected.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070F41EAF8BE300CFBB84 /* selected.caf */; };
-		0A0071041EAF8BE300CFBB84 /* ExpandingMenu.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070F71EAF8BE300CFBB84 /* ExpandingMenu.xcconfig */; };
-		0A0071051EAF8BE300CFBB84 /* ExpandingMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0070F81EAF8BE300CFBB84 /* ExpandingMenu-dummy.m */; };
-		0A0071061EAF8BE300CFBB84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070FB1EAF8BE300CFBB84 /* Info.plist */; };
-		0A0071071EAF8BE300CFBB84 /* ResourceBundle-ExpandingMenu-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A0070FC1EAF8BE300CFBB84 /* ResourceBundle-ExpandingMenu-Info.plist */; };
 		0A0071091EAF8C5300CFBB84 /* tripMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0071081EAF8C5300CFBB84 /* tripMapVC.swift */; };
 		0A00710B1EAF8CAA00CFBB84 /* tabbartripDetailMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00710A1EAF8CAA00CFBB84 /* tabbartripDetailMap.swift */; };
 		0A00710D1EAF8CF300CFBB84 /* tripDetailMapPOI4MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A00710C1EAF8CF300CFBB84 /* tripDetailMapPOI4MapVC.swift */; };
@@ -137,6 +128,13 @@
 		0AADD1FF1EAD12E500D24799 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AADD1FE1EAD12E500D24799 /* DLRadioButton.m */; };
 		0AADD2621EAD156C00D24799 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AADD2611EAD156C00D24799 /* CosmosDistrib.swift */; };
 		0AADD2641EAD16F700D24799 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AADD2631EAD16F700D24799 /* helper.swift */; };
+		0AB155101EB0DD4800348E32 /* ExpandingMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB155091EB0DD4800348E32 /* ExpandingMenu.framework */; };
+		0AB155111EB0DD4800348E32 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550A1EB0DD4800348E32 /* FBSDKCoreKit.framework */; };
+		0AB155121EB0DD4800348E32 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550B1EB0DD4800348E32 /* FBSDKLoginKit.framework */; };
+		0AB155131EB0DD4800348E32 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550C1EB0DD4800348E32 /* FBSDKShareKit.framework */; };
+		0AB155141EB0DD4800348E32 /* ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550D1EB0DD4800348E32 /* ImageViewer.framework */; };
+		0AB155151EB0DD4800348E32 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550E1EB0DD4800348E32 /* ParseFacebookUtilsV4.framework */; };
+		0AB155161EB0DD4800348E32 /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550F1EB0DD4800348E32 /* PopupDialog.framework */; };
 		0AF179A21EACFD2A00A4DE34 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A01EACFD2A00A4DE34 /* Bolts.framework */; };
 		0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A11EACFD2A00A4DE34 /* Parse.framework */; };
 		909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */; };
@@ -173,18 +171,6 @@
 		0A0070E91EAF866E00CFBB84 /* commentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentCell.swift; sourceTree = "<group>"; };
 		0A0070EC1EAF86B100CFBB84 /* uploadEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadEditVC.swift; sourceTree = "<group>"; };
 		0A0070EE1EAF872C00CFBB84 /* tripMapMasterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripMapMasterVC.swift; sourceTree = "<group>"; };
-		0A0070F01EAF8BE300CFBB84 /* ExpandingMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandingMenuButton.swift; path = ExpandingMenu/Classes/ExpandingMenuButton.swift; sourceTree = "<group>"; };
-		0A0070F11EAF8BE300CFBB84 /* ExpandingMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandingMenuItem.swift; path = ExpandingMenu/Classes/ExpandingMenuItem.swift; sourceTree = "<group>"; };
-		0A0070F21EAF8BE300CFBB84 /* expanding.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = expanding.caf; path = ExpandingMenu/Assets/Sounds/expanding.caf; sourceTree = "<group>"; };
-		0A0070F31EAF8BE300CFBB84 /* fold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = fold.caf; path = ExpandingMenu/Assets/Sounds/fold.caf; sourceTree = "<group>"; };
-		0A0070F41EAF8BE300CFBB84 /* selected.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = selected.caf; path = ExpandingMenu/Assets/Sounds/selected.caf; sourceTree = "<group>"; };
-		0A0070F61EAF8BE300CFBB84 /* ExpandingMenu.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ExpandingMenu.modulemap; sourceTree = "<group>"; };
-		0A0070F71EAF8BE300CFBB84 /* ExpandingMenu.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ExpandingMenu.xcconfig; sourceTree = "<group>"; };
-		0A0070F81EAF8BE300CFBB84 /* ExpandingMenu-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExpandingMenu-dummy.m"; sourceTree = "<group>"; };
-		0A0070F91EAF8BE300CFBB84 /* ExpandingMenu-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpandingMenu-prefix.pch"; sourceTree = "<group>"; };
-		0A0070FA1EAF8BE300CFBB84 /* ExpandingMenu-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExpandingMenu-umbrella.h"; sourceTree = "<group>"; };
-		0A0070FB1EAF8BE300CFBB84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A0070FC1EAF8BE300CFBB84 /* ResourceBundle-ExpandingMenu-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ExpandingMenu-Info.plist"; sourceTree = "<group>"; };
 		0A0071081EAF8C5300CFBB84 /* tripMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripMapVC.swift; sourceTree = "<group>"; };
 		0A00710A1EAF8CAA00CFBB84 /* tabbartripDetailMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabbartripDetailMap.swift; sourceTree = "<group>"; };
 		0A00710C1EAF8CF300CFBB84 /* tripDetailMapPOI4MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tripDetailMapPOI4MapVC.swift; sourceTree = "<group>"; };
@@ -288,6 +274,13 @@
 		0AADD1FE1EAD12E500D24799 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		0AADD2611EAD156C00D24799 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		0AADD2631EAD16F700D24799 /* helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		0AB155091EB0DD4800348E32 /* ExpandingMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExpandingMenu.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/ExpandingMenu/ExpandingMenu.framework"; sourceTree = "<group>"; };
+		0AB1550A1EB0DD4800348E32 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		0AB1550B1EB0DD4800348E32 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		0AB1550C1EB0DD4800348E32 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		0AB1550D1EB0DD4800348E32 /* ImageViewer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageViewer.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/ImageViewer/ImageViewer.framework"; sourceTree = "<group>"; };
+		0AB1550E1EB0DD4800348E32 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/ParseFacebookUtilsV4/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		0AB1550F1EB0DD4800348E32 /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework"; sourceTree = "<group>"; };
 		0AF179A01EACFD2A00A4DE34 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		0AF179A11EACFD2A00A4DE34 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +293,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB155101EB0DD4800348E32 /* ExpandingMenu.framework in Frameworks */,
+				0AB155111EB0DD4800348E32 /* FBSDKCoreKit.framework in Frameworks */,
+				0AB155121EB0DD4800348E32 /* FBSDKLoginKit.framework in Frameworks */,
+				0AB155131EB0DD4800348E32 /* FBSDKShareKit.framework in Frameworks */,
+				0AB155141EB0DD4800348E32 /* ImageViewer.framework in Frameworks */,
+				0AB155151EB0DD4800348E32 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				0AB155161EB0DD4800348E32 /* PopupDialog.framework in Frameworks */,
 				0AF179A21EACFD2A00A4DE34 /* Bolts.framework in Frameworks */,
 				0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */,
 				909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */,
@@ -343,43 +343,6 @@
 				0A0070C41EAE0AE400CFBB84 /* quantityLevelTVC.swift */,
 			);
 			name = "Quantities&Levels";
-			sourceTree = "<group>";
-		};
-		0A0070F51EAF8BE300CFBB84 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0A0070F21EAF8BE300CFBB84 /* expanding.caf */,
-				0A0070F31EAF8BE300CFBB84 /* fold.caf */,
-				0A0070F41EAF8BE300CFBB84 /* selected.caf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		0A0070FD1EAF8BE300CFBB84 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0A0070F61EAF8BE300CFBB84 /* ExpandingMenu.modulemap */,
-				0A0070F71EAF8BE300CFBB84 /* ExpandingMenu.xcconfig */,
-				0A0070F81EAF8BE300CFBB84 /* ExpandingMenu-dummy.m */,
-				0A0070F91EAF8BE300CFBB84 /* ExpandingMenu-prefix.pch */,
-				0A0070FA1EAF8BE300CFBB84 /* ExpandingMenu-umbrella.h */,
-				0A0070FB1EAF8BE300CFBB84 /* Info.plist */,
-				0A0070FC1EAF8BE300CFBB84 /* ResourceBundle-ExpandingMenu-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ExpandingMenu";
-			sourceTree = "<group>";
-		};
-		0A0070FE1EAF8BE300CFBB84 /* ExpandingMenu */ = {
-			isa = PBXGroup;
-			children = (
-				0A0070F01EAF8BE300CFBB84 /* ExpandingMenuButton.swift */,
-				0A0070F11EAF8BE300CFBB84 /* ExpandingMenuItem.swift */,
-				0A0070F51EAF8BE300CFBB84 /* Resources */,
-				0A0070FD1EAF8BE300CFBB84 /* Support Files */,
-			);
-			name = ExpandingMenu;
-			path = Pods/ExpandingMenu;
 			sourceTree = "<group>";
 		};
 		0A0071101EAF8FC200CFBB84 /* CalendarView */ = {
@@ -739,9 +702,15 @@
 		AFD272B7EFF0BC840D79E565 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AB155091EB0DD4800348E32 /* ExpandingMenu.framework */,
+				0AB1550A1EB0DD4800348E32 /* FBSDKCoreKit.framework */,
+				0AB1550B1EB0DD4800348E32 /* FBSDKLoginKit.framework */,
+				0AB1550C1EB0DD4800348E32 /* FBSDKShareKit.framework */,
+				0AB1550D1EB0DD4800348E32 /* ImageViewer.framework */,
+				0AB1550E1EB0DD4800348E32 /* ParseFacebookUtilsV4.framework */,
+				0AB1550F1EB0DD4800348E32 /* PopupDialog.framework */,
 				0A00713F1EAFB99900CFBB84 /* PhotoGallery */,
 				0A0071101EAF8FC200CFBB84 /* CalendarView */,
-				0A0070FE1EAF8BE300CFBB84 /* ExpandingMenu */,
 				0AADD2601EAD155B00D24799 /* CosmosDistrib */,
 				0AADD1FC1EAD12D300D24799 /* DLRadioButton */,
 				0AADD1F71EAD129D00D24799 /* ISOCountryCodes */,
@@ -827,23 +796,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A0071041EAF8BE300CFBB84 /* ExpandingMenu.xcconfig in Resources */,
 				0A0071291EAF8FDD00CFBB84 /* GLCalendarDayCell.xib in Resources */,
 				0A6D77741EAD088700FD8DDD /* FlagKit.xcassets in Resources */,
 				0A0071321EAF8FDD00CFBB84 /* gl-calendar-shadow@2x.png in Resources */,
-				0A0071071EAF8BE300CFBB84 /* ResourceBundle-ExpandingMenu-Info.plist in Resources */,
-				0A0071011EAF8BE300CFBB84 /* expanding.caf in Resources */,
 				0A6D777B1EAD0DE400FD8DDD /* Pacifico.ttf in Resources */,
 				0A0071311EAF8FDD00CFBB84 /* gl-calendar-shadow.png in Resources */,
 				0A0071331EAF8FDD00CFBB84 /* gl-calendar-shadow@3x.png in Resources */,
 				0A6D77781EAD08C800FD8DDD /* LaunchScreen.storyboard in Resources */,
 				0A6D77761EAD08A100FD8DDD /* Assets.xcassets in Resources */,
-				0A0071031EAF8BE300CFBB84 /* selected.caf in Resources */,
-				0A0071021EAF8BE300CFBB84 /* fold.caf in Resources */,
 				0A00712D1EAF8FDD00CFBB84 /* GLCalendarView.xib in Resources */,
 				0A00712F1EAF8FDD00CFBB84 /* gl-calendar-magnify-glass.png in Resources */,
 				0A0071301EAF8FDD00CFBB84 /* gl-calendar-magnify-glass@2x.png in Resources */,
-				0A0071061EAF8BE300CFBB84 /* Info.plist in Resources */,
 				0A6769E91EACFA6600F8A080 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,7 +880,6 @@
 				0A0070EF1EAF872C00CFBB84 /* tripMapMasterVC.swift in Sources */,
 				0A0070EA1EAF866E00CFBB84 /* commentVC.swift in Sources */,
 				0A0071AD1EAFC30E00CFBB84 /* tripDetailMapVC.swift in Sources */,
-				0A0071051EAF8BE300CFBB84 /* ExpandingMenu-dummy.m in Sources */,
 				0A0070BE1EADEF7200CFBB84 /* localization.swift in Sources */,
 				0A0070C21EADF1A900CFBB84 /* tabbarVC.swift in Sources */,
 				0AADD1FB1EAD12B100D24799 /* IsoCountryCodes.swift in Sources */,
@@ -988,9 +950,7 @@
 				0A0071B31EAFC91900CFBB84 /* RatingViewController.swift in Sources */,
 				0A0070D91EAF856400CFBB84 /* homeVC.swift in Sources */,
 				0A0070E71EAF85EA00CFBB84 /* spentVC.swift in Sources */,
-				0A0070FF1EAF8BE300CFBB84 /* ExpandingMenuButton.swift in Sources */,
 				0A00715E1EAFBAA700CFBB84 /* UIButton.swift in Sources */,
-				0A0071001EAF8BE300CFBB84 /* ExpandingMenuItem.swift in Sources */,
 				0A0071A91EAFC28600CFBB84 /* tripDetailMapPOIVC.swift in Sources */,
 				0A0070D61EAF854C00CFBB84 /* postCell.swift in Sources */,
 				0A0070E51EAF85EA00CFBB84 /* spentHeaderCell.swift in Sources */,
