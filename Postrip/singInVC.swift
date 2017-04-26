@@ -162,6 +162,8 @@ class singInVC: UIViewController {
                     return
                 }
                 if result != nil {
+                    
+                    print("result \(String(describing: result))!")
                 
                     guard let result = result as? NSDictionary,
                         let email = result["email"] as? String!,
@@ -186,11 +188,15 @@ class singInVC: UIViewController {
                     // Save first name
                     if first_name != nil {
                         myUser.setObject(first_name, forKey: "first_name")
+                        myUser.setObject(first_name, forKey: "username")
                     }
                     
                     // Save last name
                     if last_name != nil {
                         myUser.setObject(last_name, forKey: "last_name")
+                        if (myUser.username?.isEmpty)! {
+                            myUser.setObject(last_name, forKey: "username")
+                        }
                     }
                     
                     // Save email address
@@ -247,13 +253,21 @@ class singInVC: UIViewController {
                                 
                                 // User details are updated from Facebook
                                 if success {
+                                    // remeber user or save in memory did the user login or not
+                                    UserDefaults.standard.set(user!.username, forKey: "username")
+                                    UserDefaults.standard.synchronize()
                                     
+                                    // call login function from AppDelegate.swoft class
+                                    let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                                    appDelegate.login()
+                                } else {
                                     
-                                    
-                                    
-                                    
+                                    // Show alert mesage
+                                    let alert = PopupDialog(title: error_str, message: error!.localizedDescription)
+                                    let ok = DefaultButton(title: ok_str, action: nil)
+                                    alert.addButtons([ok])
+                                    self.present(alert, animated: true, completion: nil)
                                 }
-                                
                             } else {
                                 print(error!.localizedDescription)
                             }

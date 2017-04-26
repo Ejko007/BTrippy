@@ -54,6 +54,7 @@ class currenciesTVC: UITableViewController {
         self.tableView.allowsMultipleSelection = false
         
         currencyList = getCurrencyList(referenceCurrency: "USD")
+        currencyList += getCurrencyList(referenceCurrency: "EUR")
         
         subcountries.removeAll(keepingCapacity: false)
         for country in countries {

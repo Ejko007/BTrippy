@@ -190,7 +190,8 @@ class editVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
             self.webTxt.text = PFUser.current()?.object(forKey: "web") as? String
             self.emailTxt.text = PFUser.current()?.email
             self.telTxt.text = PFUser.current()?.object(forKey: "tel") as? String
-            self.currencyUsedBtn.titleLabel?.text = PFUser.current()?.object(forKey: "currencyBase") as? String
+            let currBtnTitle = PFUser.current()?.object(forKey: "currencyBase") as! String
+            self.currencyUsedBtn.setTitle(currBtnTitle, for: .normal)
                 
             let genderStr = PFUser.current()?.object(forKey: "gender") as? String
                 if genderStr == "male" {

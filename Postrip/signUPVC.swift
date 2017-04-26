@@ -88,6 +88,28 @@ class signUPVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         currencyUsedBtn.layer.borderWidth = 1
         currencyUsedBtn.layer.borderColor = UIColor.gray.cgColor
         
+        // get the localized country name (in my case, it's US English)
+        let englishLocale : NSLocale = NSLocale.init(localeIdentifier :  "en_US")
+        
+        // get the current locale
+        let currentLocale = NSLocale.current
+        
+        let theEnglishName : String? = englishLocale.displayName(forKey: NSLocale.Key.identifier, value: currentLocale.identifier)
+        
+        var countryName = String()
+        if let theEnglishName = theEnglishName {
+            countryName = theEnglishName.slice(from: "(", to: ")")!
+            print("the localized country name is \(String(describing: countryName))")
+        }
+        let currency = IsoCountryCodes.searchByName(name: countryName).currency
+        print("Currency is " + currency)
+        if countryName.isEmpty {
+            currencyUsedBtn.setTitle("CZK", for: .normal)
+        } else {
+            currencyUsedBtn.setTitle(currency, for: .normal)
+        }
+
+        // signup button properties
         signUpBtn.frame = CGRect(x: 20, y: currencyUsedTxt.frame.origin.y + 50, width: self.view.frame.size.width / 3, height: 30)
         signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 20
         

@@ -336,7 +336,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucN-qG-Jdu">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -353,7 +353,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="10+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rUx-St-Mdl">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -395,7 +395,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cuI-cb-7EU">
-                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
+                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -625,7 +625,7 @@
         <!--TabbarVC-->
         <scene sceneID="8Bl-5m-kSH">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" id="Qb9-nk-fR8" customClass="tabbarVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Qb9-nk-fR8" customClass="tabbarVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="QBt-X2-khK"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="AqR-4f-J60">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -647,7 +647,7 @@
         <!--HomeVC-->
         <scene sceneID="fe7-gl-kPt">
             <objects>
-                <collectionViewController storyboardIdentifier="homeVC" id="6AW-Rn-hWW" customClass="homeVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="homeVC" id="6AW-Rn-hWW" customClass="homeVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="grh-Hs-IhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,7 +659,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Cn8-3O-nyP" customClass="pictureCell" customModule="tripinstagram" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Cn8-3O-nyP" customClass="pictureCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="240" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -677,7 +677,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="c4A-MJ-aEt" customClass="headerView" customModule="tripinstagram" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="c4A-MJ-aEt" customClass="headerView" customModule="Postrip" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -798,7 +798,7 @@
         <!--UploadVC-->
         <scene sceneID="KQA-WZ-Yct">
             <objects>
-                <viewController id="rkd-Bp-kfI" customClass="uploadVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rkd-Bp-kfI" customClass="uploadVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lK5-Ry-omJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -941,7 +941,7 @@
         <!--Add Photo GalleryVC-->
         <scene sceneID="Ul9-T4-Q5p">
             <objects>
-                <viewController storyboardIdentifier="addPhotoGalleryVC" id="MfZ-6q-kX9" customClass="addPhotoGalleryVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addPhotoGalleryVC" id="MfZ-6q-kX9" customClass="addPhotoGalleryVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Nz-rr-AVT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -988,13 +988,13 @@
         <!--PostVC-->
         <scene sceneID="bKf-Pb-uOT">
             <objects>
-                <tableViewController storyboardIdentifier="postVC" id="iaN-MG-F7H" customClass="postVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="postVC" id="iaN-MG-F7H" customClass="postVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="450" sectionHeaderHeight="28" sectionFooterHeight="28" id="oro-9z-bqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="872" id="hLd-fg-chV" customClass="postCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="872" id="hLd-fg-chV" customClass="postCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="872"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLd-fg-chV" id="gLZ-c5-YBA">
@@ -1229,7 +1229,7 @@
         <!--FeedVC-->
         <scene sceneID="FPM-Bi-TEM">
             <objects>
-                <tableViewController id="aw0-PP-yIC" customClass="feedVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aw0-PP-yIC" customClass="feedVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="450" sectionHeaderHeight="28" sectionFooterHeight="28" id="ipZ-em-ghB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1246,7 +1246,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="872" id="Skz-pp-EYT" customClass="feedCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="872" id="Skz-pp-EYT" customClass="feedCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="872"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Skz-pp-EYT" id="rWz-dZ-sj8">
@@ -1326,7 +1326,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" id="E5z-7B-lzO" customClass="CosmosView" customModule="tripinstagram" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" id="E5z-7B-lzO" customClass="CosmosView" customModule="Postrip" customModuleProvider="target">
                                                     <rect key="frame" x="185" y="13" width="124" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </view>
@@ -1398,12 +1398,12 @@
         <!--Rating DialogVC-->
         <scene sceneID="cDl-7k-YK7">
             <objects>
-                <viewController storyboardIdentifier="ratingDialogVC" id="2TY-Mh-EGV" customClass="ratingDialogVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ratingDialogVC" id="2TY-Mh-EGV" customClass="ratingDialogVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ag3-HF-U0G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="TVm-zQ-Isx" customClass="CosmosView" customModule="tripinstagram" customModuleProvider="target">
+                            <view contentMode="scaleToFill" id="TVm-zQ-Isx" customClass="CosmosView" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="30" y="97" width="308" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1430,7 +1430,7 @@
         <!--CommentVC-->
         <scene sceneID="N96-Sr-aVO">
             <objects>
-                <viewController storyboardIdentifier="commentVC" id="dcf-wa-bhV" customClass="commentVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="commentVC" id="dcf-wa-bhV" customClass="commentVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4z0-0K-K6Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1440,7 +1440,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="6nd-FA-9pO" customClass="commentCell" customModule="tripinstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="6nd-FA-9pO" customClass="commentCell" customModule="Postrip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6nd-FA-9pO" id="aiR-6h-M3w">
@@ -1517,7 +1517,7 @@
         <!--EditVC-->
         <scene sceneID="7yj-YZ-ZXs">
             <objects>
-                <viewController id="HYz-Dn-AGy" customClass="editVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HYz-Dn-AGy" customClass="editVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Cb-8O-gUw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1641,7 +1641,7 @@
         <!--HashtagsVC-->
         <scene sceneID="A1k-8j-g8n">
             <objects>
-                <collectionViewController storyboardIdentifier="hashtagsVC" id="IDB-In-dlr" customClass="hashtagsVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="hashtagsVC" id="IDB-In-dlr" customClass="hashtagsVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9yB-c4-wgy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1653,7 +1653,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Yk7-HQ-PAu" customClass="pictureCell" customModule="tripinstagram" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Yk7-HQ-PAu" customClass="pictureCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1684,7 +1684,7 @@
         <!--NavVC-->
         <scene sceneID="oQC-FA-VV9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3se-Xd-ddq" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3se-Xd-ddq" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home" id="6jD-nB-iXL">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -1705,7 +1705,7 @@
         <!--NavVC-->
         <scene sceneID="Vf2-WY-AJp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6R-bf-qAx" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W6R-bf-qAx" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZ9-Cq-M3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1723,7 +1723,7 @@
         <!--upload-->
         <scene sceneID="TlO-RK-9uW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ba8-TA-tmg" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ba8-TA-tmg" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="upload" id="Dn2-bW-4Cg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9I7-rx-icV">
@@ -1742,7 +1742,7 @@
         <!--NavVC-->
         <scene sceneID="bbG-sB-jvp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wuR-Ht-RKy" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wuR-Ht-RKy" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="feed" id="R0D-dm-5hv">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -1763,13 +1763,13 @@
         <!--UsersVC-->
         <scene sceneID="pJ4-sQ-Ave">
             <objects>
-                <tableViewController id="Ymu-iW-VTc" customClass="usersVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ymu-iW-VTc" customClass="usersVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ICg-9v-yJS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="EFT-Ud-5N2" customClass="followersCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="EFT-Ud-5N2" customClass="followersCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EFT-Ud-5N2" id="pjY-E7-sfl">
@@ -1815,7 +1815,7 @@
         <!--NavVC-->
         <scene sceneID="bLZ-93-5lq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n0W-ed-FFv" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n0W-ed-FFv" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="users" id="Isq-Z9-wyg">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -1836,13 +1836,13 @@
         <!--NewsVC-->
         <scene sceneID="nXT-0d-une">
             <objects>
-                <tableViewController id="fvw-yY-6PF" customClass="newsVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fvw-yY-6PF" customClass="newsVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kll-QX-Jt0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="j2h-81-yCl" customClass="newsCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="j2h-81-yCl" customClass="newsCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j2h-81-yCl" id="orS-DK-9Cs">
@@ -1900,7 +1900,7 @@
         <!--NavVC-->
         <scene sceneID="uVL-hZ-SBv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ef-EP-kDD" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ef-EP-kDD" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="news" id="sXs-Qi-hnG">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
@@ -1921,7 +1921,7 @@
         <!--RateVC-->
         <scene sceneID="rpo-2c-FCu">
             <objects>
-                <viewController storyboardIdentifier="rateVC" id="jD2-9B-Ulh" customClass="rateVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rateVC" id="jD2-9B-Ulh" customClass="rateVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vD-ot-mLI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1931,7 +1931,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="31L-2d-VO3" customClass="rateCell" customModule="tripinstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="31L-2d-VO3" customClass="rateCell" customModule="Postrip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="31L-2d-VO3" id="l6T-4g-lxQ">
@@ -1965,7 +1965,7 @@
                                                         <action selector="usernameBtn_click:" destination="jD2-9B-Ulh" eventType="touchUpInside" id="wn4-kf-I5t"/>
                                                     </connections>
                                                 </button>
-                                                <view contentMode="scaleToFill" id="b4V-r6-hk6" customClass="CosmosView" customModule="tripinstagram" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" id="b4V-r6-hk6" customClass="CosmosView" customModule="Postrip" customModuleProvider="target">
                                                     <rect key="frame" x="199" y="31" width="127" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1989,7 +1989,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" id="5mj-04-WFj" customClass="CosmosView" customModule="tripinstagram" customModuleProvider="target">
+                            <view contentMode="scaleToFill" id="5mj-04-WFj" customClass="CosmosView" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="12" y="567" width="240" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2020,7 +2020,7 @@
         <!--Time FrameVC-->
         <scene sceneID="aCO-AO-gNd">
             <objects>
-                <viewController id="Dzt-mf-Op9" customClass="TimeFrameVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dzt-mf-Op9" customClass="TimeFrameVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AQi-Gl-aTU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2044,7 +2044,7 @@
         <!--Upload EditVC-->
         <scene sceneID="G5r-JF-4p2">
             <objects>
-                <viewController storyboardIdentifier="uploadEditVC" id="ccJ-Yx-TQX" customClass="uploadEditVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadEditVC" id="ccJ-Yx-TQX" customClass="uploadEditVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yiC-HD-UMk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2188,7 +2188,7 @@
         <!--Trip MapVC-->
         <scene sceneID="FYc-4q-05w">
             <objects>
-                <viewController storyboardIdentifier="tripMapVC" id="PP5-NW-Eza" customClass="tripMapVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripMapVC" id="PP5-NW-Eza" customClass="tripMapVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fx4-Gb-41R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2228,7 +2228,7 @@
         <!--ItineraryVC-->
         <scene sceneID="FNH-aF-cHw">
             <objects>
-                <viewController storyboardIdentifier="itineraryVC" id="C8t-rV-Ix7" customClass="itineraryVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itineraryVC" id="C8t-rV-Ix7" customClass="itineraryVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4WK-3x-JIi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2256,11 +2256,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryHeaderCell" id="Dbc-Em-XTS" customClass="itineraryHeaderCell" customModule="tripinstagram" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryHeaderCell" id="Dbc-Em-XTS" customClass="itineraryHeaderCell" customModule="Postrip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="386" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dbc-Em-XTS" id="rbP-eD-9Po">
-                                            <rect key="frame" x="0.0" y="0.0" width="386" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chooser-moment-icon-place" id="lKZ-4N-qUW">
@@ -2286,11 +2286,11 @@
                                             <outlet property="geopointIcon" destination="lKZ-4N-qUW" id="aw3-zo-9T9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryCell" id="tSc-Az-JEU" customClass="itineraryCell" customModule="tripinstagram" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryCell" id="tSc-Az-JEU" customClass="itineraryCell" customModule="Postrip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="386" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSc-Az-JEU" id="cBP-ke-fjP">
-                                            <rect key="frame" x="0.0" y="0.0" width="386" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJW-Ec-cqg">
@@ -2314,11 +2314,11 @@
                                             <outlet property="orderLabel" destination="4TW-Ar-bQp" id="Jao-ph-R17"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryFooterCell" id="NeF-sA-zQ6" customClass="itineraryFooterCell" customModule="tripinstagram" customModuleProvider="target">
+                                    <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itineraryFooterCell" id="NeF-sA-zQ6" customClass="itineraryFooterCell" customModule="Postrip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="386" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NeF-sA-zQ6" id="47S-yW-WeW">
-                                            <rect key="frame" x="0.0" y="0.0" width="386" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Point Objects" id="5ze-e7-30Q">
@@ -2373,18 +2373,18 @@
         <!--SpentsVC-->
         <scene sceneID="ohQ-ss-YJd">
             <objects>
-                <tableViewController storyboardIdentifier="spentsVC" id="mnK-Jn-2rh" customClass="spentsVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="spentsVC" id="mnK-Jn-2rh" customClass="spentsVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="d41-iK-avn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="spentHeaderCell" rowHeight="78" id="EEk-M4-HKV" customClass="spentHeaderCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="spentHeaderCell" rowHeight="78" id="EEk-M4-HKV" customClass="spentHeaderCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EEk-M4-HKV" id="4pf-Or-f8t">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTD-fe-PpN">
@@ -2400,11 +2400,11 @@
                                     <outlet property="spentTypeLbl" destination="uTD-fe-PpN" id="DES-Bw-wsm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spentCell" rowHeight="168" id="wiQ-tB-Rln" customClass="spentCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spentCell" rowHeight="168" id="wiQ-tB-Rln" customClass="spentCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="106" width="375" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiQ-tB-Rln" id="KEw-c4-04a">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="167.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="168"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfs-NP-6vT">
@@ -2463,7 +2463,7 @@
         <!--SpentVC-->
         <scene sceneID="D4e-RZ-LQb">
             <objects>
-                <viewController storyboardIdentifier="spentVC" id="cdb-ka-h9E" customClass="spentVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="spentVC" id="cdb-ka-h9E" customClass="spentVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8fa-Vw-bfo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2561,17 +2561,17 @@
         <!--Trips ListVC-->
         <scene sceneID="JC4-SP-pa0">
             <objects>
-                <tableViewController storyboardIdentifier="tripsListVC" id="l3B-1z-6cD" customClass="tripsListVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tripsListVC" id="l3B-1z-6cD" customClass="tripsListVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K0V-Va-CEM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripsListHeaderCell" id="Xgx-B6-S6T" customClass="tripsListHeaderCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripsListHeaderCell" id="Xgx-B6-S6T" customClass="tripsListHeaderCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgx-B6-S6T" id="AjU-8D-cyc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s7S-We-mMl">
@@ -2587,11 +2587,11 @@
                                     <outlet property="triplistDateLbl" destination="s7S-We-mMl" id="Yba-JH-rmz"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripsListCell" id="7fP-89-PeF" customClass="tripsListCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripsListCell" id="7fP-89-PeF" customClass="tripsListCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fP-89-PeF" id="Bhf-tn-Ana">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c60-ZE-MkV">
@@ -2649,7 +2649,7 @@
         <!--Menu ListVC-->
         <scene sceneID="hC8-yO-0Qs">
             <objects>
-                <tableViewController id="GBc-Vs-Hmd" customClass="menuListVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GBc-Vs-Hmd" customClass="menuListVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qNZ-BA-0uW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2762,7 +2762,7 @@
         <!--Trip Detail MapVC-->
         <scene sceneID="YxX-XD-DgZ">
             <objects>
-                <viewController storyboardIdentifier="tripDetailMapVC" id="xOp-LK-YPe" customClass="tripDetailMapVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripDetailMapVC" id="xOp-LK-YPe" customClass="tripDetailMapVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iqb-Ax-hkp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2799,17 +2799,17 @@
         <!--Trip Detail MapPOI ListVC-->
         <scene sceneID="gOx-eA-jXL">
             <objects>
-                <tableViewController storyboardIdentifier="tripDetailMapPOIListVC" id="CQL-g5-jc5" customClass="tripDetailMapPOIListVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tripDetailMapPOIListVC" id="CQL-g5-jc5" customClass="tripDetailMapPOIListVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="YGf-Qy-ORh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripDetailMapPOIListCell" rowHeight="300" id="WvD-uo-lL9" customClass="tripDetailMapPOIListCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripDetailMapPOIListCell" rowHeight="300" id="WvD-uo-lL9" customClass="tripDetailMapPOIListCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WvD-uo-lL9" id="rR3-iU-djf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POI name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZpF-lg-FYV">
@@ -2922,7 +2922,7 @@
         <!--Trip Detail MapPOI DescVC-->
         <scene sceneID="cEB-Dy-yvU">
             <objects>
-                <viewController storyboardIdentifier="tripDetailMapPOIDescVC" id="AU9-t5-DY7" customClass="tripDetailMapPOIDescVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripDetailMapPOIDescVC" id="AU9-t5-DY7" customClass="tripDetailMapPOIDescVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Yh-jc-Fr1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2965,7 +2965,7 @@
         <!--Trip Detail MapPOIVC-->
         <scene sceneID="bh2-fC-3BV">
             <objects>
-                <viewController storyboardIdentifier="tripDetailMapPOIVC" id="ZHt-nW-Gev" customClass="tripDetailMapPOIVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripDetailMapPOIVC" id="ZHt-nW-Gev" customClass="tripDetailMapPOIVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r6d-cs-gC8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3114,7 +3114,7 @@
         <!--Tabbartrip Detail Map-->
         <scene sceneID="LGA-1Q-iFH">
             <objects>
-                <tabBarController storyboardIdentifier="tabbartripDetailMap" automaticallyAdjustsScrollViewInsets="NO" id="LCj-Bz-q3O" customClass="tabbartripDetailMap" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbartripDetailMap" automaticallyAdjustsScrollViewInsets="NO" id="LCj-Bz-q3O" customClass="tabbartripDetailMap" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="17H-H5-IMb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="18d-Ip-Sog">
@@ -3137,7 +3137,7 @@
         <!--NavVC-->
         <scene sceneID="1tZ-9j-Vmp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVc-2M-zFX" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVc-2M-zFX" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icon-poi-processing" id="fo0-ue-RBe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DfH-MM-Go3">
@@ -3156,7 +3156,7 @@
         <!--Trip Detail Handle Map SearchVC-->
         <scene sceneID="oQW-hg-A4N">
             <objects>
-                <viewController id="fcG-a1-alD" customClass="tripDetailHandleMapSearchVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fcG-a1-alD" customClass="tripDetailHandleMapSearchVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alb-KR-Tcd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3183,7 +3183,7 @@
         <!--Trip Detail Map Location Search Table-->
         <scene sceneID="RqU-iE-fFN">
             <objects>
-                <tableViewController storyboardIdentifier="tripDetailMapLocationSearchTable" id="A0N-tj-Ytb" customClass="tripDetailMapLocationSearchTable" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tripDetailMapLocationSearchTable" id="A0N-tj-Ytb" customClass="tripDetailMapLocationSearchTable" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XFJ-D0-rnm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3193,18 +3193,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Ud-jb-XbZ" id="vXx-fA-WeB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xly-Eh-wfe">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="16" y="6" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eId-Lw-9Sk">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="16" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -3227,7 +3227,7 @@
         <!--NavVC-->
         <scene sceneID="VlY-zv-Kuh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="371-Q4-Yt9" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="371-Q4-Yt9" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="users" id="asr-zY-Pyj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Wx-b5-aoc">
@@ -3246,7 +3246,7 @@
         <!--NavVC-->
         <scene sceneID="PIn-m5-wxG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NqX-V1-80S" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NqX-V1-80S" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="map-icon" id="WnV-FU-qCo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bJt-6L-fKi">
@@ -3265,7 +3265,7 @@
         <!--Trip Detail MapPOI4 MapVC-->
         <scene sceneID="CfV-ju-6v3">
             <objects>
-                <viewController storyboardIdentifier="tripDetailMapPOI4MapVC" id="AuT-rn-DAX" customClass="tripDetailMapPOI4MapVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripDetailMapPOI4MapVC" id="AuT-rn-DAX" customClass="tripDetailMapPOI4MapVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xg3-dt-aft">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3415,7 +3415,7 @@
         <!--NavVC-->
         <scene sceneID="YQJ-BS-VEx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I24-f5-8qX" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I24-f5-8qX" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="add-poi" id="jle-g0-hcj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fer-un-tYj">
@@ -3434,7 +3434,7 @@
         <!--Photo CameraVC-->
         <scene sceneID="rch-Qu-c1N">
             <objects>
-                <viewController id="bPR-ij-nDE" customClass="photoCameraVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bPR-ij-nDE" customClass="photoCameraVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4b-gy-6OK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3466,7 +3466,7 @@
         <!--PhotoVC-->
         <scene sceneID="Ncf-h0-o85">
             <objects>
-                <viewController id="M3F-ZU-z9I" customClass="photoVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M3F-ZU-z9I" customClass="photoVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2l-bb-KOY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3497,7 +3497,7 @@
         <!--Tabbartrip Detail Photo-->
         <scene sceneID="uta-L3-SGT">
             <objects>
-                <tabBarController storyboardIdentifier="tabbartripDetailPhoto" id="rMN-cS-z6p" customClass="tabbartripDetailPhoto" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbartripDetailPhoto" id="rMN-cS-z6p" customClass="tabbartripDetailPhoto" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mlQ-II-tHL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3516,7 +3516,7 @@
         <!--Trip Detail PhotoNC-->
         <scene sceneID="8es-jE-b7n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xKq-34-Cie" customClass="tripDetailPhotoNC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xKq-34-Cie" customClass="tripDetailPhotoNC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="photos" id="fyE-9G-tQ5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MEx-i0-PrO">
@@ -3535,7 +3535,7 @@
         <!--Trip Details Photo CollectionVC-->
         <scene sceneID="d62-oT-8a5">
             <objects>
-                <collectionViewController id="OAs-HR-f0D" customClass="tripDetailsPhotoCollectionVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="OAs-HR-f0D" customClass="tripDetailsPhotoCollectionVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="ymk-E5-ah5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3547,7 +3547,7 @@
                             <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tripDetailPhotoViewCell" id="AWy-mG-yg4" customClass="tripDetailPhotoViewCell" customModule="tripinstagram" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tripDetailPhotoViewCell" id="AWy-mG-yg4" customClass="tripDetailPhotoViewCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="93" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -3583,7 +3583,7 @@
         <!--Trip Detail Photo DetailVC-->
         <scene sceneID="LfN-P5-0Bb">
             <objects>
-                <viewController id="f0q-uA-dTf" customClass="tripDetailPhotoDetailVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f0q-uA-dTf" customClass="tripDetailPhotoDetailVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uPP-Tp-lB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3642,7 +3642,7 @@
         <!--NavVC-->
         <scene sceneID="X16-SV-hoK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KWI-EL-avM" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KWI-EL-avM" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="HbD-mI-e3P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OYr-IM-XEY">
@@ -3661,12 +3661,12 @@
         <!--Trip Map MasterVC-->
         <scene sceneID="fB9-LT-Cbb">
             <objects>
-                <viewController storyboardIdentifier="tripMapMasterVC" id="jZa-oV-tZN" customClass="tripMapMasterVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripMapMasterVC" id="jZa-oV-tZN" customClass="tripMapMasterVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7G-9U-Aoj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="JlE-G5-pI8" customClass="TabySegmentedControl" customModule="tripinstagram" customModuleProvider="target">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="JlE-G5-pI8" customClass="TabySegmentedControl" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="74" width="375" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -3712,7 +3712,7 @@
         <!--NavVC-->
         <scene sceneID="INo-Nu-wB4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muq-S5-uoF" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muq-S5-uoF" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rdm-yu-MRX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8yt-rx-e5P">
@@ -3731,7 +3731,7 @@
         <!--NavVC-->
         <scene sceneID="8hq-vE-zbm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K63-aF-5P4" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K63-aF-5P4" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gXQ-SO-bEx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -3752,7 +3752,7 @@
         <!--Home View Controller-->
         <scene sceneID="4JR-an-Rer">
             <objects>
-                <viewController storyboardIdentifier="photoGalleryVC" id="SNk-qR-D6n" customClass="HomeViewController" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photoGalleryVC" id="SNk-qR-D6n" customClass="HomeViewController" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="83e-50-a9L" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3799,7 +3799,7 @@
                                             <inset key="sectionInset" minX="30" minY="10" maxX="10" maxY="10"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPhoto" id="lhw-c5-MaT" customClass="PhotoCollectionViewCell" customModule="tripinstagram" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPhoto" id="lhw-c5-MaT" customClass="PhotoCollectionViewCell" customModule="Postrip" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="24" width="200" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -3847,7 +3847,7 @@
         <!--Promo Content View Controller-->
         <scene sceneID="gyp-Q1-cih">
             <objects>
-                <viewController storyboardIdentifier="promoContentVC" id="Fq5-Me-nMC" customClass="PromoContentViewController" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="promoContentVC" id="Fq5-Me-nMC" customClass="PromoContentViewController" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GAV-K3-ila">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3878,7 +3878,7 @@
         <!--NavVC-->
         <scene sceneID="3Ea-A2-iR6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ctI-Nv-wXR" customClass="navVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ctI-Nv-wXR" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="JFq-uA-0s2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x6J-34-WHb">
@@ -3897,17 +3897,17 @@
         <!--CountriesTVC-->
         <scene sceneID="IhC-yM-PT4">
             <objects>
-                <tableViewController storyboardIdentifier="countriesTVC" id="Hgm-Kw-KRs" customClass="countriesTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="countriesTVC" id="Hgm-Kw-KRs" customClass="countriesTVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tlg-bn-aha">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellCountry" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" id="4PY-Le-fWa" customClass="countriesCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellCountry" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" id="4PY-Le-fWa" customClass="countriesCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4PY-Le-fWa" id="eDX-jQ-bam">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WW" id="1Lm-fC-OXP">
@@ -3965,17 +3965,17 @@
         <!--CurrenciesTVC-->
         <scene sceneID="zmu-TE-7mQ">
             <objects>
-                <tableViewController storyboardIdentifier="currenciesTVC" id="Ajd-Nt-lAb" customClass="currenciesTVC" customModule="tripinstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="currenciesTVC" id="Ajd-Nt-lAb" customClass="currenciesTVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZZw-Ne-vlY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellCountry" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" id="ees-6E-RJ3" customClass="countriesCell" customModule="tripinstagram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cellCountry" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCountry" id="ees-6E-RJ3" customClass="countriesCell" customModule="Postrip" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ees-6E-RJ3" id="NAm-NN-xGC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WW" id="Cu5-Oe-Y0E">
