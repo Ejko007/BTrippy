@@ -147,6 +147,30 @@ func getCurrencyRate(referenceCurrency: String, searchCurrency: String) -> Doubl
     return tempRate
 }
 
+func getValidCurrencyCode() -> String {
+    
+    // get the localized country name (in my case, it's US English)
+    let englishLocale : NSLocale = NSLocale.init(localeIdentifier :  "en_US")
+    
+    // get the current locale
+    let currentLocale = NSLocale.current
+    
+    let theEnglishName : String? = englishLocale.displayName(forKey: NSLocale.Key.identifier, value: currentLocale.identifier)
+    
+    var countryName = String()
+    if let theEnglishName = theEnglishName {
+        countryName = theEnglishName.slice(from: "(", to: ")")!
+        print("the localized country name is \(String(describing: countryName))")
+    }
+    let currency = IsoCountryCodes.searchByName(name: countryName).currency
+    print("Currency is " + currency)
+    if countryName.isEmpty {
+        return "CZK"
+    } else {
+        return currency
+    }
+}
+
 
 extension Double {
     /// Rounds the double to decimal places value

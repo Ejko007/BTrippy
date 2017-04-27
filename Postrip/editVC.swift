@@ -269,8 +269,8 @@ class editVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
             return
         }
         if !validateWeb(web: webTxt.text!) {
-            let okbtn = DefaultButton(title: ok_str, action: nil)
             let complMenu = PopupDialog(title: wrong_webpage_url_format_str, message: change_webpage_url_format_str)
+            let okbtn = DefaultButton(title: ok_str, action: nil)
             complMenu.addButtons([okbtn])
             self.present(complMenu, animated: true, completion: nil)
             return
@@ -278,30 +278,30 @@ class editVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
         
         // save filled in information
         let user = PFUser.current()!
-        user.username = usernameTxt.text?.lowercased()
-        user.email = emailTxt.text?.lowercased()
-        user["fullname"] = fullnameTxt.text?.lowercased()
-        user["web"] = webTxt.text?.lowercased()
-        user["bio"] = bioTxt.text
+        user.username = self.usernameTxt.text?.lowercased()
+        user.email = self.emailTxt.text?.lowercased()
+        user["fullname"] = self.fullnameTxt.text?.lowercased()
+        user["web"] = self.webTxt.text?.lowercased()
+        user["bio"] = self.bioTxt.text
         user["currencyBase"] = self.currencyUsedBtn.titleLabel?.text
         
-        if (telTxt.text!.isEmpty) {
+        if (self.telTxt.text!.isEmpty) {
             user["tel"] = ""
         } else {
-            user["tel"] = telTxt.text
+            user["tel"] = self.telTxt.text
         }
         
-        if (genderTxt.text!.isEmpty) {
+        if (self.genderTxt.text!.isEmpty) {
             user["gender"] = ""
         } else {
-            if genderTxt.text == male_str {
+            if self.genderTxt.text == male_str {
                 user["gender"] = "male"
             } else {
                 user["gender"] = "female"
             }
         }
         
-        let avaData = UIImageJPEGRepresentation(avaImg.image!, 0.5)
+        let avaData = UIImageJPEGRepresentation(self.avaImg.image!, 0.5)
         let avaFile = PFFile(name: "ava.jpg", data: avaData!)
         user["ava"] = avaFile
         

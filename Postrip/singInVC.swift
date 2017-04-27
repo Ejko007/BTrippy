@@ -215,26 +215,9 @@ class singInVC: UIViewController {
                     }
                     
                     // get the localized country name (in my case, it's US English)
-                    let englishLocale : NSLocale = NSLocale.init(localeIdentifier :  "en_US")
-                    
-                    // get the current locale
-                    let currentLocale = NSLocale.current
-                    
-                    let theEnglishName : String? = englishLocale.displayName(forKey: NSLocale.Key.identifier, value: currentLocale.identifier)
-                    
-                    var countryName = String()
-                    if let theEnglishName = theEnglishName {
-                        countryName = theEnglishName.slice(from: "(", to: ")")!
-                        print("the localized country name is \(String(describing: countryName))")
-                    }
-                    let currency = IsoCountryCodes.searchByName(name: countryName).currency
-                    print("Currency is " + currency)
-                    if countryName.isEmpty {
-                        myUser.setObject("CZK", forKey: "currencyBase")
-                    } else {
-                        myUser.setObject(currency, forKey: "currencyBase")
-                    }
-                    
+                    let currencyCode = getValidCurrencyCode()
+                    myUser.setObject(currencyCode, forKey: "currencyBase")
+                                        
                     DispatchQueue.global(qos: .userInitiated).async {
 
                         // Get Facebook profile picture
