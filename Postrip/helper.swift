@@ -227,4 +227,13 @@ extension String {
     }
 }
 
+extension UIImageView {
+    func addBlurEffect(blurEffect: UIBlurEffectStyle) {
+        let blurEffect = UIBlurEffect(style: blurEffect)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView)
+    }
+}
 

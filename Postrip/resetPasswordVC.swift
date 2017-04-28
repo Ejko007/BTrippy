@@ -19,12 +19,18 @@ class resetPasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTxt.frame = CGRect(x: 10, y: 120, width: self.view.frame.size.width - 20, height: 30)
-        resetBtn.frame = CGRect(x: 20, y: emailTxt.frame.origin.y + 50, width: self.view.frame.size.width / 3, height: 30)
-        resetBtn.layer.cornerRadius = resetBtn.frame.size.width / 20
-        cancelBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 3 - 20, y: resetBtn.frame.origin.y, width: self.view.frame.size.width / 3, height: 30)
-        cancelBtn.layer.cornerRadius = cancelBtn.frame.size.width / 20
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         
+        emailTxt.frame = CGRect(x: 10, y: self.view.frame.size.height / 2 - 30, width: self.view.frame.size.width - 20, height: 30)
+        emailTxt.placeholder = email_str
+        
+        resetBtn.frame = CGRect(x: 10, y: self.view.frame.size.height - 50, width: self.view.frame.size.width - 20, height: 40)
+        resetBtn.layer.cornerRadius = resetBtn.frame.size.width / 50
+        resetBtn.setTitle(set_str, for: .normal)
+        customizeButton(button: resetBtn)
+        
+        cancelBtn.frame = CGRect(x: 10, y: emailTxt.frame.origin.y + 50, width: self.view.frame.size.width - 20, height: 30)
+        cancelBtn.setTitle(back_str, for: .normal)
         
         // tap to hide keyboard
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardTap(recognizer:)))
@@ -36,8 +42,8 @@ class resetPasswordVC: UIViewController {
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "bg.jpg")
         bg.layer.zPosition = -1
+        bg.addBlurEffect(blurEffect: .regular)
         self.view.addSubview(bg)
-        
     }
     
     // Hide keyboard if tap
@@ -45,6 +51,13 @@ class resetPasswordVC: UIViewController {
         self.view.endEditing(true)
     }
     
+    func customizeButton(button: UIButton!) {
+        button.setBackgroundImage(nil, for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+    }
 
     // Click to reset button
     @IBAction func restBtn_click(_ sender: AnyObject) {

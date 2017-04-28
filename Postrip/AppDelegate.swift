@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         login()
         
         // color of window
-        window?.backgroundColor = .white
+        window?.backgroundColor = .black
         
         // push notification enablement
         if #available(iOS 10.0, *) {

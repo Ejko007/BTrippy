@@ -40,6 +40,8 @@ class signUPVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
 
         let width = self.view.frame.size.width
 
@@ -93,16 +95,19 @@ class signUPVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         currencyUsedBtn.setTitle(currencyName, for: .normal)
         
         // signup button properties
-        signUpBtn.frame = CGRect(x: 20, y: currencyUsedTxt.frame.origin.y + 50, width: self.view.frame.size.width / 3, height: 30)
-        signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 20
+        signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 50
+        signUpBtn.frame = CGRect(x: 10, y: self.view.frame.size.height - 50, width: self.view.frame.size.width - 20, height: 40)
+        signUpBtn.setTitle(sign_up_str, for: .normal)
+        customizeButton(button: signUpBtn)
         
-        cancelBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 3 - 20, y: signUpBtn.frame.origin.y, width: self.view.frame.size.width / 3, height: 30)
-        cancelBtn.layer.cornerRadius = cancelBtn.frame.size.width / 20
+        cancelBtn.frame = CGRect(x: 10, y: currencyUsedTxt.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 40)
+        cancelBtn.setTitle(account_already_exist_str, for: .normal)
         
         // background
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "bg.jpg")
         bg.layer.zPosition = -1
+        bg.addBlurEffect(blurEffect: .regular)
         self.view.addSubview(bg)
     
     }
@@ -115,6 +120,15 @@ class signUPVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         present(picker, animated: true, completion: nil)
         
     }
+    
+    func customizeButton(button: UIButton!) {
+        button.setBackgroundImage(nil, for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+    }
+
     
     // Connect selected image to our ImageView
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

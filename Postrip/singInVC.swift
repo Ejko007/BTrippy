@@ -25,8 +25,9 @@ class singInVC: UIViewController {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var twitterBtn: UIButton!
     @IBOutlet weak var otherLbl: UILabel!
-    @IBOutlet weak var otherLoginOptionsView: UIView!
-    @IBOutlet weak var signincocialImg: UIImageView!
+    
+    var viewsToAnimate: [UIView?]!
+    var viewsFinalYPosition : [CGFloat]!
     
     private let twitterAPIUserDetailsURL = "https://api.twitter.com/1.1/users/show.json?screen_name="
     
@@ -35,44 +36,52 @@ class singInVC: UIViewController {
         super.viewDidLoad()
 
         // Font of label
-        label.font = UIFont(name: "Pacifico", size: 25)
-        
+        label.font = UIFont(name: "Pacifico", size: 40)
+        label.sizeToFit()
         
         // alignement
-        label.frame = CGRect(x: 10, y: 80, width: self.view.frame.size.width - 20, height: 50)
-        usernameTxt.frame = CGRect(x: 10, y: label.frame.origin.y + 70, width: self.view.frame.size.width - 20, height: 30)
-        passwordTxt.frame = CGRect(x: 10, y: usernameTxt.frame.origin.y + 40, width: self.view.frame.size.width - 20, height: 30)
-        forgotBtn.frame = CGRect(x: 10, y: passwordTxt.frame.origin.y + 30, width: self.view.frame.size.width - 20, height: 30)
-        signInBtn.frame = CGRect(x: 20, y: forgotBtn.frame.origin.y + 40, width: self.view.frame.size.width / 3, height: 30)
-        signInBtn.layer.cornerRadius = signInBtn.frame.size.width / 20
-        signUpBtn.frame = CGRect(x: self.view.frame.size.width - self.view.frame.size.width / 3 - 20, y: signInBtn.frame.origin.y, width: self.view.frame.size.width / 3, height: 30)
-        signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 20
+        label.frame = CGRect(x: 10, y: 80, width: self.view.frame.size.width - 20, height: 70)
+        usernameTxt.frame = CGRect(x: 0, y: label.frame.origin.y + 100, width: self.view.frame.size.width, height: 30)
+        usernameTxt.layer.borderColor = UIColor.lightText.cgColor
+        usernameTxt.layer.borderWidth = 1.0
+        usernameTxt.placeholder = user_name_str
+
+        passwordTxt.frame = CGRect(x: 0, y: usernameTxt.frame.origin.y + 30, width: self.view.frame.size.width, height: 30)
+        passwordTxt.layer.borderColor = UIColor.lightText.cgColor
+        passwordTxt.layer.borderWidth = 1.0
+        passwordTxt.placeholder = password_str
         
-        otherLoginOptionsView.layer.borderWidth = 1
-        otherLoginOptionsView.layer.borderColor = UIColor.white.cgColor
-        otherLoginOptionsView.layer.cornerRadius = otherLoginOptionsView.frame.size.width / 50
-        otherLoginOptionsView.frame = CGRect(x: 10, y: signInBtn.frame.origin.y + 100, width: self.view.frame.size.width - 20, height: 100)
-        otherLoginOptionsView.backgroundColor = UIColor.clear
+        signInBtn.frame = CGRect(x: 0, y: passwordTxt.frame.origin.y + 40, width: self.view.frame.size.width, height: 40)
+        signInBtn.setTitle(sign_in_str, for: .normal)
+        signInBtn?.setBackgroundImage(nil, for: .normal)
+        signInBtn?.backgroundColor = UIColor(red: 52/255, green: 191/255, blue: 73/255, alpha: 1)
         
-        facebookBtn.layer.cornerRadius = facebookBtn.frame.size.width / 20
-        facebookBtn.frame = CGRect(x: 10, y: 60, width: self.view.frame.size.width / 3, height: 30)
+        forgotBtn.frame = CGRect(x: 10, y: signInBtn.frame.origin.y + 50, width: self.view.frame.size.width - 20, height: 40)
+        forgotBtn.setTitle(forgotten_password_str, for: .normal)
         
-        twitterBtn.layer.cornerRadius = twitterBtn.frame.size.width / 20
-        twitterBtn.frame = CGRect(x: otherLoginOptionsView.frame.size.width - otherLoginOptionsView.frame.size.width / 3 - 20, y: 60, width: self.view.frame.size.width / 3, height: 30)
- 
-        signincocialImg.frame = CGRect(x: self.view.frame.size.width / 2 - 60, y: -50, width: 100, height: 100)
-        signincocialImg.layer.cornerRadius = signincocialImg.frame.height / 2
-        signincocialImg.clipsToBounds = true
-        _ = signincocialImg.image?.imageWithColor(tintColor: UIColor.red.withAlphaComponent(0.3))
+        facebookBtn.layer.cornerRadius = facebookBtn.frame.size.width / 30
+        facebookBtn.frame = CGRect(x: 10, y: self.view.frame.size.height - 100, width: self.view.frame.size.width / 2 - 20, height: 40)
+        facebookBtn.setTitle(facebook_str, for: .normal)
         
+        twitterBtn.layer.cornerRadius = twitterBtn.frame.size.width / 30
+        twitterBtn.frame = CGRect(x: self.view.frame.size.width - facebookBtn.frame.size.width - 20, y: self.view.frame.size.height - 100, width: self.view.frame.size.width / 2 - 10, height: 40)
+        twitterBtn.setTitle(twitter_str, for: .normal)
+        
+        signUpBtn.layer.cornerRadius = signUpBtn.frame.size.width / 50
+        signUpBtn.frame = CGRect(x: 10, y: facebookBtn.frame.origin.y + 50, width: self.view.frame.size.width - 20, height: 40)
+        signUpBtn.setTitle(sign_up_str, for: .normal)
+
+        // customize the look of buttons
+        customizeButton(button: facebookBtn)
+        customizeButton(button: twitterBtn)
+        customizeButton(button: signUpBtn)
+       
         otherLbl.textColor = UIColor.white
         otherLbl.text = or_use_str
         otherLbl.frame = CGRect(x: 0, y: 0, width: 120, height: 20)
- 
-        otherLoginOptionsView.addSubview(signincocialImg)
-        otherLoginOptionsView.addSubview(facebookBtn)
-        otherLoginOptionsView.addSubview(twitterBtn)
-    
+     
+        viewsToAnimate = [usernameTxt, passwordTxt, signInBtn, forgotBtn, facebookBtn, twitterBtn, signUpBtn, label]
+
         // tap to hide keyboard
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(recognizer:)))
         hideTap.numberOfTapsRequired = 1
@@ -83,8 +92,56 @@ class singInVC: UIViewController {
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
         bg.image = UIImage(named: "bg.jpg")
         bg.layer.zPosition = -1
+        bg.addBlurEffect(blurEffect: .regular)
         self.view.addSubview(bg)
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // stretch background image to fill screen
+        // backgroundImage.frame = CGRectMake( 0,  0,  logInView!.frame.width,  logInView!.frame.height)
+        
+        // position logo at top with larger frame
+        // logInView!.logo!.sizeToFit()
+        // let logoFrame = logInView!.logo!.frame
+        // logInView!.logo!.frame = CGRectMake(logoFrame.origin.x, logInView!.usernameField!.frame.origin.y - logoFrame.height - 16, logInView!.frame.width,  logoFrame.height)
+        
+        // We to position all the views off the bottom of the screen
+        // and then make them rise back to where they should be
+        // so we track their final position in an array
+        // but change their frame so they are shifted downwards off the screen
+//        viewsFinalYPosition = [CGFloat]()
+//        for viewToAnimate in viewsToAnimate {
+//            let currentFrame = viewToAnimate?.frame
+//            viewsFinalYPosition.append((currentFrame?.origin.y)!)
+//            viewToAnimate?.frame = CGRect(x: (currentFrame?.origin.x)!, y: self.view.frame.height + (currentFrame?.origin.y)!, width: (currentFrame?.width)!, height: (currentFrame?.height)!)
+//        }
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //super.viewDidAppear(animated)
+        
+        // Now we'll animate all our views back into view
+        // and, using the final position we stored, we'll
+        // reset them to where they should be
+//        if viewsFinalYPosition.count == self.viewsToAnimate.count {
+//            UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseInOut,  animations: { () -> Void in
+//                for viewToAnimate in self.viewsToAnimate {
+//                    let currentFrame = viewToAnimate?.frame
+//                    viewToAnimate?.frame = CGRect(x: (currentFrame?.origin.x)!, y: self.viewsFinalYPosition.remove(at: 0), width: (currentFrame?.width)!, height: (currentFrame?.height)!)
+//                }
+//            }, completion: nil)
+//        }
+    }
+    
+    func customizeButton(button: UIButton!) {
+        button.setBackgroundImage(nil, for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
     }
     
     // hide keyboard
