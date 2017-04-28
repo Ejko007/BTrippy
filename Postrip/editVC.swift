@@ -178,31 +178,33 @@ class editVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UI
     func information () {
         
         // receive profile image
-        let ava = PFUser.current()?.object(forKey: "ava") as! PFFile
-        ava.getDataInBackground (block: { (data:Data?, error:Error?) in
-            if error == nil {
-            self.avaImg.image = UIImage(data: data!)
-        
-            // receive text information
-            self.usernameTxt.text = PFUser.current()?.username
-            self.fullnameTxt.text = PFUser.current()?.object(forKey: "fullname") as? String
-            self.bioTxt.text = PFUser.current()?.object(forKey: "bio") as? String
-            self.webTxt.text = PFUser.current()?.object(forKey: "web") as? String
-            self.emailTxt.text = PFUser.current()?.email
-            self.telTxt.text = PFUser.current()?.object(forKey: "tel") as? String
-            let currBtnTitle = PFUser.current()?.object(forKey: "currencyBase") as! String
-            self.currencyUsedBtn.setTitle(currBtnTitle, for: .normal)
-                
-            let genderStr = PFUser.current()?.object(forKey: "gender") as? String
-                if genderStr == "male" {
-                    self.genderTxt.text = male_str
+        let ava = PFUser.current()?.object(forKey: "ava") as? PFFile
+        if ava != nil {
+            ava?.getDataInBackground (block: { (data:Data?, error:Error?) in
+                if error == nil {
+                self.avaImg.image = UIImage(data: data!)
+            
+                // receive text information
+                self.usernameTxt.text = PFUser.current()?.username
+                self.fullnameTxt.text = PFUser.current()?.object(forKey: "fullname") as? String
+                self.bioTxt.text = PFUser.current()?.object(forKey: "bio") as? String
+                self.webTxt.text = PFUser.current()?.object(forKey: "web") as? String
+                self.emailTxt.text = PFUser.current()?.email
+                self.telTxt.text = PFUser.current()?.object(forKey: "tel") as? String
+                let currBtnTitle = PFUser.current()?.object(forKey: "currencyBase") as! String
+                self.currencyUsedBtn.setTitle(currBtnTitle, for: .normal)
+                    
+                let genderStr = PFUser.current()?.object(forKey: "gender") as? String
+                    if genderStr == "male" {
+                        self.genderTxt.text = male_str
+                    } else {
+                        self.genderTxt.text = female_str
+                    }
                 } else {
-                    self.genderTxt.text = female_str
+                    print(error!.localizedDescription)
                 }
-            } else {
-                print(error!.localizedDescription)
-            }
-        })
+            })
+        }
     }
     
     // clicked cance button

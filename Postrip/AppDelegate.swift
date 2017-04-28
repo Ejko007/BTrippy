@@ -11,6 +11,7 @@ import Parse
 import UserNotifications
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
+import ParseTwitterUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptions(inBackground: launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()
 
+        // Twitter configuration
+        PFTwitterUtils.initialize(withConsumerKey: "RSUs2WNRFRyDeXamh0leU5aYW", consumerSecret: "375wRNaYJ6H1MFwHOX3Nbz4YGHV8hwdx3LYNi95z0jQgWLKmDT")
+        
         //call login function
         login()
         

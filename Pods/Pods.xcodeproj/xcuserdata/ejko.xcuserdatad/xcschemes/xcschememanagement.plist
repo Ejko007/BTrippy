@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ParseTwitterUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Postrip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>10EE0F117423A7676B8C1E144BC2B486</key>
+		<key>0F93CA2718D32395419C6B91631A1CCD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,6 +92,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9DA734A2A888F7A894F809ED790EC04E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B1332F0085BCA14BA5A2949B0B399447</key>
 		<dict>
 			<key>primary</key>
@@ -102,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF5F29277895551776FDB2C194B969C1</key>
+		<key>CD713BE2F696EA7565687386E45469F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

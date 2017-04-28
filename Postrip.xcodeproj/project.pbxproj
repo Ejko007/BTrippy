@@ -137,6 +137,8 @@
 		0AB155161EB0DD4800348E32 /* PopupDialog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB1550F1EB0DD4800348E32 /* PopupDialog.framework */; };
 		0AF179A21EACFD2A00A4DE34 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A01EACFD2A00A4DE34 /* Bolts.framework */; };
 		0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A11EACFD2A00A4DE34 /* Parse.framework */; };
+		0AFFBED81EB1FE7900BCAFDB /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFFBED71EB1FE7900BCAFDB /* ParseTwitterUtils.framework */; };
+		0AFFBEDC1EB204AA00BCAFDB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFBEDB1EB204AA00BCAFDB /* MBProgressHUD.m */; };
 		909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */; };
 /* End PBXBuildFile section */
 
@@ -283,6 +285,9 @@
 		0AB1550F1EB0DD4800348E32 /* PopupDialog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopupDialog.framework; path = "../../../Library/Developer/Xcode/DerivedData/Postrip-gksruluqnaciswhivfnjnfenopvt/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework"; sourceTree = "<group>"; };
 		0AF179A01EACFD2A00A4DE34 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		0AF179A11EACFD2A00A4DE34 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "Pods/../build/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		0AFFBED71EB1FE7900BCAFDB /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "Pods/../build/Debug-iphoneos/ParseTwitterUtils/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		0AFFBEDA1EB204AA00BCAFDB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0AFFBEDB1EB204AA00BCAFDB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1D7D8C2C27DE3E3C9468DA /* Pods-Postrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AFFBED81EB1FE7900BCAFDB /* ParseTwitterUtils.framework in Frameworks */,
 				0AB155101EB0DD4800348E32 /* ExpandingMenu.framework in Frameworks */,
 				0AB155111EB0DD4800348E32 /* FBSDKCoreKit.framework in Frameworks */,
 				0AB155121EB0DD4800348E32 /* FBSDKLoginKit.framework in Frameworks */,
@@ -588,6 +594,7 @@
 		0A6769E21EACFA6600F8A080 /* Postrip */ = {
 			isa = PBXGroup;
 			children = (
+				0AFFBED91EB2047500BCAFDB /* MBProgressHUD */,
 				0A0071A01EAFC16200CFBB84 /* PBRevealViewController */,
 				0AADD2651EAD171100D24799 /* Helpers */,
 				0A6D77791EAD0DCF00FD8DDD /* Fonts */,
@@ -699,9 +706,19 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		0AFFBED91EB2047500BCAFDB /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0AFFBEDA1EB204AA00BCAFDB /* MBProgressHUD.h */,
+				0AFFBEDB1EB204AA00BCAFDB /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		AFD272B7EFF0BC840D79E565 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0AFFBED71EB1FE7900BCAFDB /* ParseTwitterUtils.framework */,
 				0AB155091EB0DD4800348E32 /* ExpandingMenu.framework */,
 				0AB1550A1EB0DD4800348E32 /* FBSDKCoreKit.framework */,
 				0AB1550B1EB0DD4800348E32 /* FBSDKLoginKit.framework */,
@@ -767,7 +784,7 @@
 				TargetAttributes = {
 					0A6769DF1EACFA6600F8A080 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = RXJ28CS78E;
+						DevelopmentTeam = Y84RLB322F;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -903,6 +920,7 @@
 				0A00712C1EAF8FDD00CFBB84 /* GLCalendarView.m in Sources */,
 				0A0071551EAFBAA700CFBB84 /* Bool.swift in Sources */,
 				0A0070D71EAF854C00CFBB84 /* postVC.swift in Sources */,
+				0AFFBEDC1EB204AA00BCAFDB /* MBProgressHUD.m in Sources */,
 				0A0071771EAFBC0400CFBB84 /* VideoScrubber.swift in Sources */,
 				0AADD1FF1EAD12E500D24799 /* DLRadioButton.m in Sources */,
 				0AADD1FA1EAD12B100D24799 /* IsoCountries.swift in Sources */,
@@ -1091,13 +1109,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = RXJ28CS78E;
+				DEVELOPMENT_TEAM = Y84RLB322F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
 					"$(PROJECT_DIR)/tripinstagram",
 					"$(PROJECT_DIR)/tripinstagram/Postrip",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ParseTwitterUtils",
 				);
 				INFOPLIST_FILE = Postrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1115,13 +1134,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = RXJ28CS78E;
+				DEVELOPMENT_TEAM = Y84RLB322F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Parse",
 					"$(PROJECT_DIR)/tripinstagram",
 					"$(PROJECT_DIR)/tripinstagram/Postrip",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ParseTwitterUtils",
 				);
 				INFOPLIST_FILE = Postrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

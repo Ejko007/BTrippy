@@ -15,5 +15,6 @@ target 'Postrip' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'ParseFacebookUtilsV4'
+  pod 'ParseTwitterUtils'
 
 end

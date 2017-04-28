@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import PopupDialog
 import ParseFacebookUtilsV4
+import ParseTwitterUtils
 
 class singInVC: UIViewController {
     
@@ -26,6 +27,8 @@ class singInVC: UIViewController {
     @IBOutlet weak var otherLbl: UILabel!
     @IBOutlet weak var otherLoginOptionsView: UIView!
     @IBOutlet weak var signincocialImg: UIImageView!
+    
+    private let twitterAPIUserDetailsURL = "https://api.twitter.com/1.1/users/show.json?screen_name="
     
     // default function
     override func viewDidLoad() {
@@ -258,15 +261,10 @@ class singInVC: UIViewController {
                     }
                 }
            })
-
             
+        // --------------------------
             
-            
-            
-            
-            // --------------------------
-            
-            if(FBSDKAccessToken.current() != nil) {
+        if(FBSDKAccessToken.current() != nil) {
                 let protectedPage = self.storyboard?.instantiateViewController(withIdentifier: "ProtectedPageViewController") as! navVC
                 
                 let protectedPageNav = UINavigationController(rootViewController: protectedPage)
@@ -274,16 +272,117 @@ class singInVC: UIViewController {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 
                 appDelegate.window?.rootViewController = protectedPageNav
-                
             }
         }
     }
     
+    
     @IBAction func twitterBtn_tapped(_ sender: UIButton) {
-        
-        
+        //if PFUser.current() == nil {
+            PFTwitterUtils.logIn { (user: PFUser?, error: Error?) in
+                if let user = user {
+                    if user.isNew {
+                        // process user object
+                        self.processTwitterUser()
+                    } else {
+                        // process user object
+                        self.processTwitterUser()
+                    }
+                    
+                } else {
+                    print("The user cancelled Twitter login.")
+                }
+            }
+       // }
     }
     
+    func processTwitterUser() {
+        let spinningActivity = MBProgressHUD.showAdded(to: view, animated: true)
+        spinningActivity.label.text = loading_str
+        spinningActivity.detailsLabel.text = please_wait_str + "..."
+        
+        let pfTwitter = PFTwitterUtils.twitter()
+        let twitterUserName = pfTwitter?.screenName
+        let userDetailsURL = twitterAPIUserDetailsURL + twitterUserName!
+        
+        let myURL = NSURL(string: userDetailsURL)
+        let request = NSMutableURLRequest(url: myURL! as URL)
+        request.httpMethod = "GET"
+        
+        pfTwitter!.sign(request)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
+            if error != nil {
+                spinningActivity.hide(animated: true)
+                
+                let alert = PopupDialog(title: error_str, message: error!.localizedDescription)
+                let ok = DefaultButton(title: ok_str, action: nil)
+                alert.addButtons([ok])
+                self.present(alert, animated: true, completion: nil)
+            
+                PFUser.logOut()
+                return
+            }
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                if let parseJSON = json {
+                    if let profileImageURL = parseJSON["profile_image_url"] as? String {
+                        let profilePictureData = NSData(contentsOf: NSURL(string: profileImageURL)! as URL)
+                        if profilePictureData != nil {
+                            //let profileFileObject = PFFile(data: profilePictureData! as Data)
+                            let avaImage = UIImage(data: profilePictureData! as Data)
+                            let avaData = UIImageJPEGRepresentation(avaImage!, 0.5)
+                            let avaFile = PFFile(name: "ava.jpg", data: avaData!)
+                            PFUser.current()?.setObject(avaFile!, forKey: "ava")
+                            //PFUser.current()?.setObject(profileFileObject!, forKey: "ava")
+                        }
+                        
+                        let fullname = parseJSON["name"]!
+                        PFUser.current()?.username = twitterUserName
+                        PFUser.current()?.setObject(twitterUserName!, forKey: "username")
+                        PFUser.current()?.setObject(fullname, forKey: "fullname")
+                        
+                        let currencyCode = getValidCurrencyCode()
+                        PFUser.current()?.setObject(currencyCode, forKey: "currencyBase")
+                        PFUser.current()?.setObject("male", forKey: "gender")
+                    
+                        PFUser.current()?.saveInBackground(block: { (success, error) in
+                            
+                            if error != nil {
+                                spinningActivity.hide(animated: true)
+
+                                let alert = PopupDialog(title: error_str, message: error!.localizedDescription)
+                                let ok = DefaultButton(title: ok_str, action: nil)
+                                alert.addButtons([ok])
+                                self.present(alert, animated: true, completion: nil)
+                                PFUser.logOut()
+                                
+                                return
+                            } else {
+                                
+                                // remeber user or save in memory did the user login or not
+                                UserDefaults.standard.set(twitterUserName, forKey: "username")
+                                UserDefaults.standard.synchronize()
+                                
+                                spinningActivity.hide(animated: true)
+                                // perform login
+                                DispatchQueue.global(qos: .userInitiated).async {
+                                    // call login function from AppDelegate.swift class
+                                    let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                                    appDelegate.login()
+                                }
+                            }
+                        })
+                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
     
 }
 

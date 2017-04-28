@@ -188,6 +188,10 @@ As of April 5, 2017, Parse, LLC has transferred this code to the parse-community
 
 See https://www.parse.com/about/terms
 
+## ParseTwitterUtils
+
+See https://www.parse.com/about/terms
+
 ## PopupDialog
 
 Copyright (c) 2016 Orderella Ltd. (http://orderella.co.uk)

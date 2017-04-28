@@ -180,14 +180,17 @@ class homeVC: UICollectionViewController {
         header.bioLbl.text = PFUser.current()?.object(forKey: "bio") as? String
         header.bioLbl.sizeToFit()
                 
-        let avaQuery = PFUser.current()?.object(forKey: "ava") as! PFFile
-        avaQuery.getDataInBackground(block: { (data: Data?, error: Error?) in
-            if error == nil {
-                header.avaImg.image = UIImage(data: data!)
-            } else {
-                print(error!.localizedDescription)
-            }
-        })
+        let avaQuery = PFUser.current()?.object(forKey: "ava") as? PFFile
+        if avaQuery != nil {
+            avaQuery?.getDataInBackground(block: { (data: Data?, error: Error?) in
+                if error == nil {
+                    header.avaImg.image = UIImage(data: data!)
+                } else {
+                    print(error!.localizedDescription)
+                }
+            })
+        }
+        
         header.button.setTitle(update_profile_str, for: UIControlState.normal)
         
         // STEP 2. Count Statistics

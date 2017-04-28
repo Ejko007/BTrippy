@@ -126,3 +126,6 @@ let facebook_str = "Facebook"
 let share_item = "Zde je zajímavý příspěvek"
 let home_application_url_str = "http://www.ejko.cz"
 let or_use_str = " nebo použijte "
+let loading_str = "Pracuji"
+let please_wait_str = "Čekejte prosím"
+
