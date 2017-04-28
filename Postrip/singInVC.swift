@@ -24,7 +24,6 @@ class singInVC: UIViewController {
     @IBOutlet weak var forgotBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var twitterBtn: UIButton!
-    @IBOutlet weak var otherLbl: UILabel!
     
     var viewsToAnimate: [UIView?]!
     var viewsFinalYPosition : [CGFloat]!
@@ -75,11 +74,7 @@ class singInVC: UIViewController {
         customizeButton(button: facebookBtn)
         customizeButton(button: twitterBtn)
         customizeButton(button: signUpBtn)
-       
-        otherLbl.textColor = UIColor.white
-        otherLbl.text = or_use_str
-        otherLbl.frame = CGRect(x: 0, y: 0, width: 120, height: 20)
-     
+            
         viewsToAnimate = [usernameTxt, passwordTxt, signInBtn, forgotBtn, facebookBtn, twitterBtn, signUpBtn, label]
 
         // tap to hide keyboard
@@ -90,10 +85,11 @@ class singInVC: UIViewController {
         
         // background
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
-        bg.image = UIImage(named: "bg.jpg")
+        bg.image = UIImage(named: "bg.jpeg")
         bg.layer.zPosition = -1
         bg.addBlurEffect(blurEffect: .regular)
         self.view.addSubview(bg)
+        
         
     }
     

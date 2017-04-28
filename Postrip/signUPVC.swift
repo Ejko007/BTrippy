@@ -105,7 +105,7 @@ class signUPVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         // background
         let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
-        bg.image = UIImage(named: "bg.jpg")
+        bg.image = UIImage(named: "bg.jpeg")
         bg.layer.zPosition = -1
         bg.addBlurEffect(blurEffect: .regular)
         self.view.addSubview(bg)

@@ -64,13 +64,6 @@
                                     <segue destination="HCa-Du-JCW" kind="modal" identifier="SignUPVC" id="iEY-uy-mdH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or use" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="voU-Tv-dO6">
-                                <rect key="frame" x="103" y="392" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h91-ja-IML">
                                 <rect key="frame" x="16" y="590" width="168" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,7 +108,6 @@
                         <outlet property="facebookBtn" destination="h91-ja-IML" id="T1g-K2-WFn"/>
                         <outlet property="forgotBtn" destination="aA6-YL-hri" id="3Lz-Da-Tzj"/>
                         <outlet property="label" destination="DZs-na-oe5" id="FLT-yk-s2C"/>
-                        <outlet property="otherLbl" destination="voU-Tv-dO6" id="Rcm-b6-8mO"/>
                         <outlet property="passwordTxt" destination="n0W-zZ-4zk" id="fN7-8H-LoJ"/>
                         <outlet property="signInBtn" destination="Z9e-LM-tJW" id="PW6-Xh-hKT"/>
                         <outlet property="signUpBtn" destination="Jul-06-Ohk" id="L0B-Id-TiC"/>
@@ -323,7 +315,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ucN-qG-Jdu">
-                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -340,7 +332,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="10+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rUx-St-Mdl">
-                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -382,7 +374,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cuI-cb-7EU">
-                                            <rect key="frame" x="16" y="0.0" width="39" height="44"/>
+                                            <rect key="frame" x="15" y="0.0" width="40" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -2391,7 +2383,7 @@
                                 <rect key="frame" x="0.0" y="106" width="375" height="168"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiQ-tB-Rln" id="KEw-c4-04a">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="168"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="168"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfs-NP-6vT">
@@ -2578,7 +2570,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7fP-89-PeF" id="Bhf-tn-Ana">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c60-ZE-MkV">
