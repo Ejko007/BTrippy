@@ -95,6 +95,8 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         // set clear background color
         countriesView.backgroundColor = .clear
         
+        // set background color to white
+        self.view.backgroundColor = .white
     }
     
    

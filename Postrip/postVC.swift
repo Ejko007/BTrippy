@@ -177,21 +177,21 @@ class postVC: UITableViewController {
     // fading and animation effects
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // define initial state (before the animation)
-        cell.alpha = 0
-        //let rotationAngleInRadians = 90.0 * CGFloat(M_PI/180.0)
-        //let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
-        cell.layer.transform = rotationTransform
-        
-        // define the final state (after the animation)
-        UIView.animate(withDuration: 1.0, animations: {cell.alpha = 1})
-        UIView.animate(withDuration: 1.0, animations: {cell.layer.transform = CATransform3DIdentity})
-  
-        // fading animation
-        let gradient = CAGradientLayer()
-        gradient.frame = cell.bounds
-        gradient.colors = [UIColor.white.cgColor, UIColor.black.cgColor]
-        tableView.layer.insertSublayer(gradient, at: 0)
+        //cell.alpha = 0
+        ////let rotationAngleInRadians = 90.0 * CGFloat(M_PI/180.0)
+        ////let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
+//        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
+//        cell.layer.transform = rotationTransform
+//        
+//        // define the final state (after the animation)
+//        UIView.animate(withDuration: 1.0, animations: {cell.alpha = 1})
+//        UIView.animate(withDuration: 1.0, animations: {cell.layer.transform = CATransform3DIdentity})
+//  
+//        // fading animation
+//        let gradient = CAGradientLayer()
+//        gradient.frame = cell.bounds
+//        gradient.colors = [UIColor.white.cgColor, UIColor.black.cgColor]
+//        tableView.layer.insertSublayer(gradient, at: 0)
         
     }
 

@@ -139,6 +139,8 @@
 		0AF179A31EACFD2A00A4DE34 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF179A11EACFD2A00A4DE34 /* Parse.framework */; };
 		0AFFBED81EB1FE7900BCAFDB /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFFBED71EB1FE7900BCAFDB /* ParseTwitterUtils.framework */; };
 		0AFFBEDC1EB204AA00BCAFDB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFBEDB1EB204AA00BCAFDB /* MBProgressHUD.m */; };
+		0AFFBEDE1EB3BCA400BCAFDB /* CustomInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFBEDD1EB3BCA400BCAFDB /* CustomInteractionController.swift */; };
+		0AFFBEE01EB3BD2500BCAFDB /* CustomNavigationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFBEDF1EB3BD2500BCAFDB /* CustomNavigationAnimationController.swift */; };
 		909A6CC330CC9BF5905BDDEF /* Pods_Postrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */; };
 /* End PBXBuildFile section */
 
@@ -288,6 +290,8 @@
 		0AFFBED71EB1FE7900BCAFDB /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "Pods/../build/Debug-iphoneos/ParseTwitterUtils/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
 		0AFFBEDA1EB204AA00BCAFDB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		0AFFBEDB1EB204AA00BCAFDB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0AFFBEDD1EB3BCA400BCAFDB /* CustomInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInteractionController.swift; sourceTree = "<group>"; };
+		0AFFBEDF1EB3BD2500BCAFDB /* CustomNavigationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationAnimationController.swift; sourceTree = "<group>"; };
 		B6CC98423A6874C933022658 /* Pods-Postrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D4FF9EB496B108C2E42C51 /* Pods_Postrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Postrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1D7D8C2C27DE3E3C9468DA /* Pods-Postrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Postrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Postrip/Pods-Postrip.release.xcconfig"; sourceTree = "<group>"; };
@@ -702,6 +706,8 @@
 				0A00710E1EAF8E5100CFBB84 /* TabySegmentedControl.swift */,
 				0A0070BD1EADEF7200CFBB84 /* localization.swift */,
 				0AADD2631EAD16F700D24799 /* helper.swift */,
+				0AFFBEDD1EB3BCA400BCAFDB /* CustomInteractionController.swift */,
+				0AFFBEDF1EB3BD2500BCAFDB /* CustomNavigationAnimationController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -928,6 +934,7 @@
 				0A0071A31EAFC17800CFBB84 /* PBRevealViewController.m in Sources */,
 				0A0071B11EAFC8C900CFBB84 /* feedVC.swift in Sources */,
 				0A0070E41EAF85EA00CFBB84 /* spentCell.swift in Sources */,
+				0AFFBEDE1EB3BCA400BCAFDB /* CustomInteractionController.swift in Sources */,
 				0A00719C1EAFBD9B00CFBB84 /* HomeViewController.swift in Sources */,
 				0A00719D1EAFBD9B00CFBB84 /* PhotoCollectionViewCell.swift in Sources */,
 				0A00710F1EAF8E5100CFBB84 /* TabySegmentedControl.swift in Sources */,
@@ -981,6 +988,7 @@
 				0AADD2621EAD156C00D24799 /* CosmosDistrib.swift in Sources */,
 				0A0071891EAFBCEA00CFBB84 /* GalleryDisplacedViewsDataSource.swift in Sources */,
 				0A0071B01EAFC8C900CFBB84 /* feedCell.swift in Sources */,
+				0AFFBEE01EB3BD2500BCAFDB /* CustomNavigationAnimationController.swift in Sources */,
 				0A0071641EAFBAC300CFBB84 /* ImageFadeInHandler.swift in Sources */,
 				0A00715D1EAFBAA700CFBB84 /* UIApplication.swift in Sources */,
 				0A0071BF1EAFCC5500CFBB84 /* newsCell.swift in Sources */,

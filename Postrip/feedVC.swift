@@ -10,42 +10,14 @@ import UIKit
 import Parse
 import PopupDialog
 
-extension UIImage {
-    var bwImage: UIImage? {
-        guard let cgImage = cgImage,
-            let bwContext = bwContext else {
-                return nil
-        }
-        
-        let rect = CGRect(origin: .zero, size: size)
-        bwContext.draw(cgImage, in: rect)
-        let bwCgImage = bwContext.makeImage()
-        
-        return bwCgImage.flatMap { UIImage(cgImage: $0) }
-    }
-    
-    private var bwContext: CGContext? {
-        let bwContext = CGContext(data: nil,
-                                  width: Int(size.width * scale),
-                                  height: Int(size.height * scale),
-                                  bitsPerComponent: 8,
-                                  bytesPerRow: Int(size.width * scale),
-                                  space: CGColorSpaceCreateDeviceGray(),
-                                  bitmapInfo: CGImageAlphaInfo.none.rawValue)
-        
-        bwContext?.interpolationQuality = .high
-        bwContext?.setShouldAntialias(false)
-        
-        return bwContext
-    }
-}
-
-class feedVC: UITableViewController {
+class feedVC: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     // UI objects
     @IBOutlet weak var indicator: UIActivityIndicatorView!
 
-    
+    let customNavigationAnimationController = CustomNavigationAnimationController()
+    let customInteractionController = CustomInteractionController()
+
     var refresher = UIRefreshControl()
     
     // Arrays to hold server data
@@ -80,6 +52,7 @@ class feedVC: UITableViewController {
 
         // title at top
         self.navigationItem.title = feeds_str.uppercased()
+        navigationController?.delegate = self
                 
         // pull to refresh
         refresher.addTarget(self, action: #selector(feedVC.loadPosts), for: UIControlEvents.valueChanged)
@@ -98,6 +71,27 @@ class feedVC: UITableViewController {
         loadPosts()
         
     
+    }
+    
+    // used for animation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showAction" {
+            let toViewController = segue.destination as UIViewController
+            toViewController.transitioningDelegate = self
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push {
+            customInteractionController.attachToViewController(toVC)
+        }
+        customNavigationAnimationController.reverse = operation == .pop
+        return customNavigationAnimationController
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return customInteractionController.transitionInProgress ? customInteractionController : nil
     }
     
     // uploading function with posts after receive notification
@@ -372,15 +366,15 @@ class feedVC: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         // define initial state (before the animation)
-        cell.alpha = 0
-        let rotationAngleInRadians = 90.0 * CGFloat(Double.pi/180.0)
-        let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
-        //let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
-        cell.layer.transform = rotationTransform
-        
-        // define the final state (after the animation)
-        UIView.animate(withDuration: 1.0, animations: {cell.alpha = 1})
-        UIView.animate(withDuration: 1.0, animations: {cell.layer.transform = CATransform3DIdentity})
+//        cell.alpha = 0
+//        let rotationAngleInRadians = 90.0 * CGFloat(Double.pi/180.0)
+//        let rotationTransform = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
+//        //let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
+//        cell.layer.transform = rotationTransform
+//        
+//        // define the final state (after the animation)
+//        UIView.animate(withDuration: 1.0, animations: {cell.alpha = 1})
+//        UIView.animate(withDuration: 1.0, animations: {cell.layer.transform = CATransform3DIdentity})
         
     }
         
@@ -465,16 +459,7 @@ class feedVC: UITableViewController {
             }
         })
         
-        // place post picture
-        picArray[indexPath.row].getDataInBackground(block: { (data: Data?, error: Error?) in
-            if error == nil {
-                cell.picImg.image = UIImage(data: data!)
-            } else {
-                print (error!.localizedDescription)
-            }
-        })
-        
-        // calcula post date
+        // calculate post date
         let from = dateArray[indexPath.row]
         let now = NSDate()
         // let components : NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfMonth]
