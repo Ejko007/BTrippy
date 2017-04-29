@@ -74,14 +74,6 @@ class feedVC: UITableViewController, UIViewControllerTransitioningDelegate, UINa
     }
     
     // used for animation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showAction" {
-            let toViewController = segue.destination as UIViewController
-            toViewController.transitioningDelegate = self
-        }
-    }
-    
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .push {
             customInteractionController.attachToViewController(toVC)

@@ -69,7 +69,7 @@ class itineraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         itineraryTableView.delegate = self
         itineraryTableView.dataSource = self
         
-        itineraryTableView.estimatedRowHeight = 60
+        itineraryTableView.estimatedRowHeight = 80
         itineraryTableView.rowHeight = UITableViewAutomaticDimension
     }
     
@@ -120,7 +120,7 @@ class itineraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -141,7 +141,7 @@ class itineraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 55.0
+        return 80.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -155,7 +155,7 @@ class itineraryVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 80
+        return 80.0
     }
     
 

@@ -10,8 +10,8 @@ import UIKit
 import Parse
 import PopupDialog
 
-class spentsVC: UITableViewController {
-    
+class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+        
     // size of screen
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
@@ -41,11 +41,14 @@ class spentsVC: UITableViewController {
         // Create a navigation item with a title
         self.navigationItem.title = spents_menu_str.uppercased()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // show edit button for current user post only
         let spentBtn = UIBarButtonItem(image: UIImage(named: "spent_add.png"), style: .plain, target: self, action: #selector(addTapped))
         self.navigationItem.rightBarButtonItem = spentBtn
         spentBtn.tintColor = .white
-        
-        // show edit button for current user post only
+
         if (PFUser.current()?.username == self.username) {
             self.navigationItem.rightBarButtonItems = [spentBtn]
             spentBtn.isEnabled = true
@@ -53,7 +56,6 @@ class spentsVC: UITableViewController {
             self.navigationItem.rightBarButtonItems = []
             spentBtn.isEnabled = false
         }
-        
     }
     
      // find post
@@ -344,5 +346,5 @@ class spentsVC: UITableViewController {
         
         self.navigationController!.pushViewController(nextVC, animated: true)
     }
-
+    
 }

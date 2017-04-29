@@ -37,6 +37,7 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var POIuuidLbl: UILabel!
     @IBOutlet weak var POIActualPositionBtn: UIButton!
+    @IBOutlet weak var POITypeView: UIView!
     
     var pointtype : Int = 0
     var isNewPOI : Bool = true
@@ -58,6 +59,9 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // height of navigationbar
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+
         isAuthorizedtoGetUserLocation()
         
         // initialize location manager and delegate it
@@ -77,14 +81,6 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         // hide uuid stored in uuid label
         POIuuidLbl.isHidden = true
         
-        // Create left and right button for navigation item
-        // new back button
-        if !isNewPOI {
-            let backBtn = UIBarButtonItem(image: UIImage(named: "back.png"), style: .plain, target: self, action: #selector(back))
-            self.navigationItem.leftBarButtonItem = backBtn
-            backBtn.tintColor = .white
-        }
-        
         // add save button to the right
         let saveBtn = UIBarButtonItem(image: UIImage(named: "accept.png"), style: .plain, target: self, action: #selector(POISaveBtn_Clicked))
         self.navigationItem.rightBarButtonItem = saveBtn
@@ -102,9 +98,9 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         
         // programmatically add radio buttons
         // first radio button
-        let frameFirst = CGRect(x: self.view.frame.size.width / 2 - 131, y: height - 200, width: 162, height: 17);
+        let frameFirst = CGRect(x: self.view.frame.size.width / 2 - 131, y: height - 200 + tabbarheight, width: 162, height: 17);
         let firstRadioButton = createRadioButton(frame: frameFirst, title: point_passthru_str, color: UIColor(colorLiteralRed: 0.00, green: 0.580, blue: 0.969, alpha: 1.00))
-        let frameSecond = CGRect(x: self.view.frame.size.width / 2 - 131 + 100, y: height - 200, width: 162, height: 17);
+        let frameSecond = CGRect(x: self.view.frame.size.width / 2 - 131 + 100, y: height - 200 + tabbarheight, width: 162, height: 17);
         let secondRadioButton = createRadioButton(frame: frameSecond, title: point_interest_str, color: UIColor(colorLiteralRed: 1.00, green: 0.361, blue: 0.145, alpha: 1.00))
         firstRadioButton.isEnabled = true
         // second radio button
@@ -197,6 +193,9 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     
     func addConstraints() {
         
+        // height of navigationbar
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        
         POINameLbl.translatesAutoresizingMaskIntoConstraints = false
         POINameTxt.translatesAutoresizingMaskIntoConstraints = false
         POIDescLbl.translatesAutoresizingMaskIntoConstraints = false
@@ -210,7 +209,71 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         POITypeBtn.translatesAutoresizingMaskIntoConstraints = false
         POILatLongFrameView.translatesAutoresizingMaskIntoConstraints = false
         POIActualPositionBtn.translatesAutoresizingMaskIntoConstraints = false
+        POITypeView.translatesAutoresizingMaskIntoConstraints = false
 
+        // longlat view constraints alignement
+        POILatLongFrameView.layer.cornerRadius = 5.0
+        POILatLongFrameView.layer.masksToBounds = true
+        // POILatLongFrameView.frame = CGRect(x: 0, y: 0, width: width - 20, height: 190)
+        POILatLongFrameView.backgroundColor = UIColor(colorLiteralRed: 0.00, green: 0.580, blue: 0.969, alpha: 1.00)
+        POILatLongFrameView.tintColor = .white
+        
+        // POITypeView contraints alignement
+        POITypeView.frame = CGRect(x: 0, y: 0, width: width - 20, height: 50)
+        
+        let poiLatLongView_width = width - 20
+        let poiTypeView_width = width - 20
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poilatitudelbl(\(poiLatLongView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poilatitudelbl":POILatitudeLbl]))
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poilatitude(\(poiLatLongView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poilatitude":POILatitudeTxt]))
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poilongitudelbl(\(poiLatLongView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poilongitudelbl":POILongitudeLbl]))
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poilongitude(\(poiLatLongView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poilongitude":POILongitudeTxt]))
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[getlocbtn(\(poiLatLongView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["getlocbtn":POIActualPositionBtn]))
+        
+        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-10-[poilatitudelbl(15)]-10-[poilatitude(20)]-10-[poilongitudelbl(15)]-10-[poilongitude(20)]-10-[getlocbtn(20)]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poilatitudelbl":POILatitudeLbl,"poilatitude":POILatitudeTxt,"poilongitudelbl":POILongitudeLbl,"poilongitude":POILongitudeTxt,"getlocbtn":POIActualPositionBtn]))
+        
+        // POIType view constraints and alignement
+        self.POITypeView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poitype(\(poiTypeView_width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poitype":POITypeBtn]))
+        
+        self.POITypeView.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-10-[poitype(30)]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poitype":POITypeBtn]))
+
+        // view constraints and alignement
         self.view.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-10-[poinamelbl(\(width - 20))]-10-|",
             options: [],
@@ -246,24 +309,12 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
             options: [],
             metrics: nil,
             views: ["poicomment":POICommentTxtView]))
-
+        
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[poitype(\(width - 20))]-10-|",
+            withVisualFormat: "V:|-(\(tabbarheight + 10))-[poinamelbl(15)]-10-[poiname(20)]-10-[poidesclbl(15)]-10-[poidesc(20)]-10-[poicommlbl(15)]-10-[poicomm(40)]-10-[poiview]-10-[poitypeview]-10-|",
             options: [],
             metrics: nil,
-            views: ["poitype":POITypeBtn]))
-
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[poinamelbl(15)]-10-[poiname(20)]-10-[poidesclbl(15)]-10-[poidesc(20)]-10-[poicommlbl(15)]-10-[poicomm(\(height - 540))]-10-[poiview(150)]",
-            options: [],
-            metrics: nil,
-            views: ["poinamelbl":POINameLbl,"poiname":POINameTxt,"poidesclbl":POIDescLbl,"poidesc":POIDescTxt,"poicommlbl":POICommentLbl,"poicomm":POICommentTxtView,"poiview":POILatLongFrameView]))
-
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[poitype(30)]",
-            options: [],
-            metrics: nil,
-            views: ["poitype":POITypeBtn]))
+            views: ["poinamelbl":POINameLbl,"poiname":POINameTxt,"poidesclbl":POIDescLbl,"poidesc":POIDescTxt,"poicommlbl":POICommentLbl,"poicomm":POICommentTxtView,"poiview":POILatLongFrameView,"poitypeview":POITypeView]))
         
         self.view.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-10-[poiview(\(width - 20))]-10-|",
@@ -271,51 +322,13 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
             metrics: nil,
             views: ["poiview":POILatLongFrameView]))
         
-        POILatLongFrameView.layer.cornerRadius = 5.0
-        POILatLongFrameView.layer.masksToBounds = true
-        POILatLongFrameView.frame = CGRect(x: 0, y: 0, width: width - 20, height: 190)
-        POILatLongFrameView.backgroundColor = UIColor(colorLiteralRed: 0.00, green: 0.580, blue: 0.969, alpha: 1.00)
-        POILatLongFrameView.tintColor = .white
-        self.view.addSubview(POILatLongFrameView)
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-10-[poitypeview(\(width - 20))]-10-|",
+            options: [],
+            metrics: nil,
+            views: ["poitypeview":POITypeView]))
         
-        let poiLatLongView_width = POILatLongFrameView.frame.width
-        
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[poilatitudelbl(\(poiLatLongView_width - 20))]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["poilatitudelbl":POILatitudeLbl]))
-        
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[poilatitude(\(poiLatLongView_width - 20))]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["poilatitude":POILatitudeTxt]))
-        
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[poilongitudelbl(\(poiLatLongView_width - 20))]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["poilongitudelbl":POILongitudeLbl]))
-        
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[poilongitude(\(poiLatLongView_width - 20))]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["poilongitude":POILongitudeTxt]))
-
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[getlocbtn(\(poiLatLongView_width - 20))]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["getlocbtn":POIActualPositionBtn]))
-
-        self.POILatLongFrameView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[poilatitudelbl(15)]-10-[poilatitude(20)]-10-[poilongitudelbl(15)]-10-[poilongitude(20)]-10-[getlocbtn(20)]-10-|",
-            options: [],
-            metrics: nil,
-            views: ["poilatitudelbl":POILatitudeLbl,"poilatitude":POILatitudeTxt,"poilongitudelbl":POILongitudeLbl,"poilongitude":POILongitudeTxt,"getlocbtn":POIActualPositionBtn]))
-    }
+     }
 
     // find user location
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

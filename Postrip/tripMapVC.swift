@@ -331,8 +331,8 @@ class tripMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         if annotationView == nil {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             
-            let colorPointAnnotation = annotation as! ColorPointAnnotation
-            annotationView?.pinTintColor = colorPointAnnotation.pinColor
+            let colorPointAnnotation = annotation as? ColorPointAnnotation
+            annotationView?.pinTintColor = colorPointAnnotation?.pinColor
             
             annotationView?.canShowCallout = true
             annotationView?.isEnabled = true

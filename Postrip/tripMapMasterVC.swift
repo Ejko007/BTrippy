@@ -43,21 +43,11 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         
         super.viewDidLoad()
         
+        // height of navigationbar
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        
         // Create a navigation item with a title
         self.navigationItem.title = triproute_menu_str.uppercased()
-        
-        // new edit button
-        let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(edit))
-        
-        // show edit button for current user post only
-        if PFUser.current()?.username == self.username.lowercased() {
-            self.navigationItem.rightBarButtonItems = [editBtn]
-            editBtn.isEnabled = true
-        } else {
-            self.navigationItem.rightBarButtonItems = []
-            editBtn.isEnabled = false
-        }
-
         
         // add contraints
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +63,7 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         
         // constraints settings
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-5-[segmentcontrol(30)]-5-[mainview]-|",
+            withVisualFormat: "V:|-(\(tabbarheight))-[segmentcontrol(20)]-5-[mainview]-|",
             options: [],
             metrics: nil, views: ["segmentcontrol":segmentedControl, "mainview": contentView]))
 
@@ -95,6 +85,20 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         segmentedControl.initUI()
         segmentedControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
         displayCurrentTab(TabIndex.firstChildTab.rawValue)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // new edit button
+        let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(edit))
+        
+        // show edit button for current user post only
+        if PFUser.current()?.username == self.username.lowercased() {
+            self.navigationItem.rightBarButtonItems = [editBtn]
+            editBtn.isEnabled = true
+        } else {
+            self.navigationItem.rightBarButtonItems = []
+            editBtn.isEnabled = false
+        }
     }
     
     func displayCurrentTab(_ tabIndex: Int){

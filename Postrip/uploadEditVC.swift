@@ -301,6 +301,7 @@ class uploadEditVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         let width = self.view.frame.size.width
         
         let navheight = (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
         
         pcImg.translatesAutoresizingMaskIntoConstraints = false
         titleTxt.translatesAutoresizingMaskIntoConstraints = false
@@ -331,12 +332,12 @@ class uploadEditVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             metrics: nil, views: ["picture":pcImg, "removebtn":removeBtn, "titletxt":titleTxt]))
         
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[publishlbl(20)]-15-[savebtn(\(width / 8))]-|",
+            withVisualFormat: "V:[publishlbl(20)]-15-[savebtn(\(width / 8))]-\(tabbarheight)-|",
             options: [],
             metrics: nil, views: ["publishlbl":publishLbl, "savebtn":saveBtn]))
         
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[publishswitch(20)]-15-[savebtn(\(width / 8))]-|",
+            withVisualFormat: "V:[publishswitch(20)]-15-[savebtn(\(width / 8))]-\(tabbarheight)-|",
             options: [],
             metrics: nil, views: ["publishswitch":publishSwitch, "savebtn":saveBtn]))
         

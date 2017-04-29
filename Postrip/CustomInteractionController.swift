@@ -10,6 +10,7 @@ import UIKit
 
 class CustomInteractionController: UIPercentDrivenInteractiveTransition {
     var navigationController: UINavigationController!
+    var tabbarController: UITabBarController!
     var shouldCompleteTransition = false
     var transitionInProgress = false
     var completionSeed: CGFloat {
