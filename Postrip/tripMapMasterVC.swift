@@ -44,7 +44,9 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         // height of navigationbar
-        let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        let navheight = (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
+
         
         // Create a navigation item with a title
         self.navigationItem.title = triproute_menu_str.uppercased()
@@ -63,7 +65,7 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         
         // constraints settings
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-(\(tabbarheight))-[segmentcontrol(20)]-5-[mainview]-|",
+            withVisualFormat: "V:|-(\(navheight))-[segmentcontrol(20)]-5-[mainview]-(\(tabbarheight))-|",
             options: [],
             metrics: nil, views: ["segmentcontrol":segmentedControl, "mainview": contentView]))
 
