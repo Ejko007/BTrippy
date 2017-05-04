@@ -11,7 +11,7 @@ import Parse
 import PopupDialog
 import MapKit
 
-class postCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
+class postCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var postUserView: UIView!
@@ -59,6 +59,7 @@ class postCell: UITableViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
         postMapView.showsUserLocation = true
         postMapView.delegate = self
         MapViewLocationManager.delegate = self
+        
         MapViewLocationManager.startUpdatingLocation()
         postMapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
         

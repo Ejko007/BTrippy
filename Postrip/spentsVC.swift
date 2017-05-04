@@ -11,7 +11,7 @@ import Parse
 import PopupDialog
 
 class spentsVC: UITableViewController {
-        
+
     // size of screen
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
@@ -40,6 +40,8 @@ class spentsVC: UITableViewController {
         
         // Create a navigation item with a title
         self.navigationItem.title = spents_menu_str.uppercased()
+        
+        self.view.backgroundColor = .white
         
         findSpents()
     }
@@ -102,11 +104,6 @@ class spentsVC: UITableViewController {
                 print(error!.localizedDescription)
             }
         })
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // display spents records
-        // findSpents()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -232,7 +229,7 @@ class spentsVC: UITableViewController {
             othersectionsNr = 1
         }
         
-            return (initsectionsNr + othersectionsNr)
+        return (initsectionsNr + othersectionsNr)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

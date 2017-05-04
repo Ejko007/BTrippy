@@ -10,13 +10,13 @@ import UIKit
 import Parse
 import PopupDialog
 
-class feedVC: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+let customNavigationAnimationController = CustomNavigationAnimationController()
+let customInteractionController = CustomInteractionController()
+
+class feedVC: UITableViewController, UINavigationControllerDelegate {
     
     // UI objects
     @IBOutlet weak var indicator: UIActivityIndicatorView!
-
-    let customNavigationAnimationController = CustomNavigationAnimationController()
-    let customInteractionController = CustomInteractionController()
 
     var refresher = UIRefreshControl()
     
@@ -345,6 +345,7 @@ class feedVC: UITableViewController, UIViewControllerTransitioningDelegate, UINa
         
         // navigate to post view controller
         let post = self.storyboard?.instantiateViewController(withIdentifier: "postVC") as! postVC
+        
         self.navigationController?.pushViewController(post, animated: true)
     }
     

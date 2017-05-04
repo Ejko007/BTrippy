@@ -16,7 +16,6 @@ import Social
 var postuuid = [String]()
 
 class postVC: UITableViewController {
-    
 
     // arrays to hold information from server
     var avaArray = [PFFile]()
@@ -53,11 +52,11 @@ class postVC: UITableViewController {
         self.navigationItem.title = photo_str.uppercased()
         
         // new back button
-        self.navigationItem.hidesBackButton = true
-        let backBtn = UIBarButtonItem(image: UIImage(named: "back.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
+//        self.navigationItem.hidesBackButton = true
+//        let backBtn = UIBarButtonItem(image: UIImage(named: "back.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
 
         //let backBtn = UIBarButtonItem(title: "Zpět", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))
-        self.navigationItem.leftBarButtonItem = backBtn
+        // self.navigationItem.leftBarButtonItem = backBtn
         
         // new edit button
         let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(edit))
@@ -163,6 +162,19 @@ class postVC: UITableViewController {
         })
     }
     
+    // used for animation
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push {
+            customInteractionController.attachToViewController(toVC)
+        }
+        customNavigationAnimationController.reverse = operation == .pop
+        return customNavigationAnimationController
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return customInteractionController.transitionInProgress ? customInteractionController : nil
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         // hide expanding menu
         configureExpandingMenuButton()
@@ -683,6 +695,7 @@ class postVC: UITableViewController {
         // menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 72.0)
         menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: (self.tabBarController?.view.bounds.height)! - 72.0)
         self.tabBarController?.view.addSubview(menuButton)
+        
         //self.view.addSubview(menuButton)
         
         func showAlert(_ title: String) {
@@ -752,7 +765,7 @@ class postVC: UITableViewController {
             //tripsListViewController.uuid = self.uuidArray.last!
 
         }
-        
+                
         menuButton.addMenuItems([item1, item2, item3, item4, item5])
         
         menuButton.willPresentMenuItems = { (menu) -> Void in
