@@ -71,10 +71,29 @@ class singInVC: UIViewController {
         signUpBtn.setTitle(sign_up_str, for: .normal)
 
         // customize the look of buttons
+        if let facebookImage = UIImage(named: "facebook_logo.png") {
+            let newFacebookImg = resizeImage(facebookImage, targetSize: CGSize(width: 30, height: 30))
+            facebookBtn.setTitle("Facebook", for: UIControlState.normal)
+            facebookBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
+            let tintedFacebookImage = newFacebookImg.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+            
+            facebookBtn.setImage(tintedFacebookImage, for: .normal)
+            facebookBtn.tintColor = .white
+            facebookBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        }
+        if let twitterImage = UIImage(named: "twitter_logo.png") {
+            let newTwitterImg = resizeImage(twitterImage, targetSize: CGSize(width: 25, height: 25))
+            twitterBtn.setTitle("Twitter", for: UIControlState.normal)
+            twitterBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
+            let tintedTwitterImage = newTwitterImg.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+            twitterBtn.setImage(tintedTwitterImage, for: .normal)
+            twitterBtn.tintColor = .white
+            twitterBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        }
         customizeButton(button: facebookBtn)
         customizeButton(button: twitterBtn)
         customizeButton(button: signUpBtn)
-            
+        
         viewsToAnimate = [usernameTxt, passwordTxt, signInBtn, forgotBtn, facebookBtn, twitterBtn, signUpBtn, label]
 
         // tap to hide keyboard

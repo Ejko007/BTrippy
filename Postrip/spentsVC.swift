@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import PopupDialog
 
-class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+class spentsVC: UITableViewController {
         
     // size of screen
     let width = UIScreen.main.bounds.width
@@ -41,6 +41,7 @@ class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UI
         // Create a navigation item with a title
         self.navigationItem.title = spents_menu_str.uppercased()
         
+        findSpents()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -105,7 +106,7 @@ class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UI
     
     override func viewWillAppear(_ animated: Bool) {
         // display spents records
-        findSpents()
+        // findSpents()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -127,7 +128,8 @@ class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UI
     
     // cell editability
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        let canEdit = true
+        return canEdit
     }
     
     // swipe cell for actions
@@ -319,12 +321,6 @@ class spentsVC: UITableViewController, UIViewControllerTransitioningDelegate, UI
         nextVC.spentobjectId = result.objectId
         
         self.navigationController!.pushViewController(nextVC, animated: true)        
-    }
-    
-    // show/dismiss expanding menu
-    override func viewWillDisappear(_ animated: Bool) {
-        // dismiss expanding menu
-        // self.tabBarController?.view.subviews.last?.isHidden = false
     }
     
     // go back function

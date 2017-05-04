@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import PopupDialog
 
-class spentVC: UIViewController, UINavigationBarDelegate, UITextFieldDelegate, UITextViewDelegate {
+class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var spentTypeBtn: DLRadioButton!    
     @IBOutlet weak var spentNameTxt: UITextField!
