@@ -8,7 +8,7 @@
 
 import Foundation
 
-class spentCell: UITableViewCell, UITableViewDelegate {
+class spentCell: UITableViewCell {
     
     @IBOutlet weak var spentDateLbl: UILabel!
     @IBOutlet weak var spentNameLbl: UILabel!
@@ -56,11 +56,4 @@ class spentCell: UITableViewCell, UITableViewDelegate {
             metrics: nil, views: ["spentamount":spentAmountLbl, "spentcurrency":spentCurrencyLbl]))
 
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-
 }

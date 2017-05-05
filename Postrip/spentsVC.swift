@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import PopupDialog
 
-class spentsVC: UITableViewController {
+class spentsVC: UITableViewController, UINavigationControllerDelegate {
 
     // size of screen
     let width = UIScreen.main.bounds.width

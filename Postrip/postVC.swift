@@ -693,10 +693,10 @@ class postVC: UITableViewController {
         let menuButtonSize: CGSize = CGSize(width: 30.0, height: 30.0)
         let menuButton = ExpandingMenuButton(frame: CGRect(origin: CGPoint.zero, size: menuButtonSize), centerImage: UIImage(named: "chooser-button-tab")!, centerHighlightedImage: UIImage(named: "chooser-button-tab-highlighted")!)
         // menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: self.view.bounds.height - 72.0)
-        menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: (self.tabBarController?.view.bounds.height)! - 72.0)
-        self.tabBarController?.view.addSubview(menuButton)
+        menuButton.center = CGPoint(x: self.view.bounds.width - 32.0, y: (self.tabBarController?.view.bounds.height)! - 140.0)  // - 72.0
+        // self.tabBarController?.view.addSubview(menuButton)
         
-        //self.view.addSubview(menuButton)
+        self.view.addSubview(menuButton)
         
         func showAlert(_ title: String) {
             let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
@@ -708,6 +708,7 @@ class postVC: UITableViewController {
             //showAlert("Music")
             
             let spentViewController = storyBoard.instantiateViewController(withIdentifier: "spentsVC") as! spentsVC
+
             self.navigationController!.pushViewController(spentViewController, animated: true)
             
             // delegate uuid for displaying spents
