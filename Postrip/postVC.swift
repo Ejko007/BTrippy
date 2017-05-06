@@ -707,7 +707,7 @@ class postVC: UITableViewController {
         let item1 = ExpandingMenuItem(size: menuButtonSize, title: spents_menu_str, image: UIImage(named: "Coins")!, highlightedImage: UIImage(named: "chooser-moment-icon-place-highlighted")!, backgroundImage: UIImage(named: "chooser-moment-button"), backgroundHighlightedImage: UIImage(named: "chooser-moment-button-highlighted")) { () -> Void in
             //showAlert("Music")
             
-            let spentViewController = storyBoard.instantiateViewController(withIdentifier: "spentsVC") as! spentsVC
+            let spentViewController = storyBoard.instantiateViewController(withIdentifier: "spentsListVC") as! spentsListVC
 
             self.navigationController!.pushViewController(spentViewController, animated: true)
             

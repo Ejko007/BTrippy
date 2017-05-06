@@ -2350,95 +2350,103 @@
             </objects>
             <point key="canvasLocation" x="4394.5" y="6184.5"/>
         </scene>
-        <!--SpentsVC-->
-        <scene sceneID="ohQ-ss-YJd">
+        <!--Spents ListVC-->
+        <scene sceneID="IM3-Dg-W3S">
             <objects>
-                <tableViewController storyboardIdentifier="spentsVC" id="mnK-Jn-2rh" customClass="spentsVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="d41-iK-avn">
+                <viewController storyboardIdentifier="spentsListVC" id="8wh-CX-6yj" customClass="spentsListVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBw-kh-K2F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="spentHeaderCell" rowHeight="78" id="EEk-M4-HKV" customClass="spentHeaderCell" customModule="Postrip" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="78"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EEk-M4-HKV" id="4pf-Or-f8t">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTD-fe-PpN">
-                                            <rect key="frame" x="21" y="27" width="329" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="spentTypeLbl" destination="uTD-fe-PpN" id="DES-Bw-wsm"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spentCell" rowHeight="168" id="wiQ-tB-Rln" customClass="spentCell" customModule="Postrip" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="106" width="375" height="168"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wiQ-tB-Rln" id="KEw-c4-04a">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="167.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bfs-NP-6vT">
-                                            <rect key="frame" x="21" y="27" width="107" height="109"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9N-oS-oTz">
-                                            <rect key="frame" x="151" y="25" width="203" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MXD-y8-sK7">
-                                            <rect key="frame" x="151" y="92" width="138" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bMr-GY-Bj9">
-                                            <rect key="frame" x="297" y="92" width="57" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" id="xIO-m1-ZR8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="spentHeaderCell" rowHeight="105" id="bog-CP-Hmg" customClass="spentHeaderCell" customModule="Postrip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bog-CP-Hmg" id="8l0-KA-MPU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BN9-Ij-Ua9">
+                                                    <rect key="frame" x="23" y="47" width="329" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spentTypeLbl" destination="BN9-Ij-Ua9" id="fgL-Wi-hLp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="spentCell" rowHeight="202" id="Nco-Tw-d1G" customClass="spentCell" customModule="Postrip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="133" width="375" height="202"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nco-Tw-d1G" id="o8l-MZ-ueW">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="201.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Currency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QP5-s2-qz9">
+                                                    <rect key="frame" x="288" y="110" width="57" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3xe-fU-bba">
+                                                    <rect key="frame" x="118" y="110" width="138" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bjh-KH-mh6">
+                                                    <rect key="frame" x="19" y="61" width="107" height="109"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KVD-2v-iJR">
+                                                    <rect key="frame" x="53" y="31" width="203" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="spentAmountLbl" destination="3xe-fU-bba" id="mS5-Qj-9BX"/>
+                                            <outlet property="spentCurrencyLbl" destination="QP5-s2-qz9" id="Mu3-gJ-S1d"/>
+                                            <outlet property="spentDateLbl" destination="bjh-KH-mh6" id="w7Y-uv-0zq"/>
+                                            <outlet property="spentNameLbl" destination="KVD-2v-iJR" id="Ypv-zp-PQK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="spentAmountLbl" destination="MXD-y8-sK7" id="4GP-NE-XDZ"/>
-                                    <outlet property="spentCurrencyLbl" destination="bMr-GY-Bj9" id="OOk-pG-jEW"/>
-                                    <outlet property="spentDateLbl" destination="Bfs-NP-6vT" id="sit-4J-mEg"/>
-                                    <outlet property="spentNameLbl" destination="h9N-oS-oTz" id="uYx-fk-SFL"/>
+                                    <outlet property="dataSource" destination="8wh-CX-6yj" id="Lfs-uK-eBf"/>
+                                    <outlet property="delegate" destination="8wh-CX-6yj" id="YsN-L3-t8V"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="mnK-Jn-2rh" id="GVo-r5-CJa"/>
-                            <outlet property="delegate" destination="mnK-Jn-2rh" id="gJY-hV-hhG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="uN0-it-u2s"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="39E-Ko-ft6"/>
                     <connections>
-                        <segue destination="cdb-ka-h9E" kind="push" identifier="spentVC" id="28D-VV-EOg"/>
+                        <outlet property="spentsTV" destination="xIO-m1-ZR8" id="hvV-7f-R6g"/>
+                        <segue destination="cdb-ka-h9E" kind="push" identifier="spentVC" id="4bh-Z6-5Om"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zpQ-wR-npf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAl-lt-emt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6277" y="5082"/>
+            <point key="canvasLocation" x="6106.5" y="5081.5"/>
         </scene>
         <!--SpentVC-->
         <scene sceneID="D4e-RZ-LQb">
@@ -2536,7 +2544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBk-sB-yh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6842" y="5082"/>
+            <point key="canvasLocation" x="6663" y="5082"/>
         </scene>
         <!--Trips ListVC-->
         <scene sceneID="JC4-SP-pa0">
@@ -3608,10 +3616,10 @@
             </objects>
             <point key="canvasLocation" x="3779.5" y="9569.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavVC-->
         <scene sceneID="iPK-lL-hvV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ryi-Pw-AIN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ryi-Pw-AIN" customClass="navVC" customModule="Postrip" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="chooser-moment-icon-camera" id="dlN-hu-Z8K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDA-ho-Fs8">
@@ -4004,12 +4012,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mnK-Jn-2rh" kind="relationship" relationship="rootViewController" id="jo1-n8-Ffy"/>
+                        <segue destination="8wh-CX-6yj" kind="push" id="28m-4O-Pio"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ks2-rU-ugg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5690" y="5082"/>
+            <point key="canvasLocation" x="5587" y="5082"/>
         </scene>
     </scenes>
     <resources>
