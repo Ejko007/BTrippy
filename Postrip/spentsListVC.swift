@@ -217,7 +217,7 @@ class spentsListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         delete.backgroundColor = UIColor(patternImage: UIImage(named: "delete.png")!)
         
         // spent belongs to current user
-        if self.username == PFUser.current()?.username {
+        if self.username == PFUser.current()?.username?.lowercased() {
             return [delete]
         } else {
             return []

@@ -10,6 +10,9 @@ import UIKit
 
 open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
 
+    // is owner of post or not?
+    var isOwner:Bool = false
+    
     // UI
     fileprivate let overlayView = BlurView()
     /// A custom view on the top of the gallery with layout using default (or custom) pinning settings for header.
@@ -224,6 +227,9 @@ open class GalleryViewController: UIPageViewController, ItemControllerDelegate {
             deleteButton.alpha = 0
             self.view.addSubview(deleteButton)
         }
+        
+        // show delete button only for pictures gallery owner
+        deleteButton?.isHidden = !isOwner
     }
 
     fileprivate func configureScrubber() {

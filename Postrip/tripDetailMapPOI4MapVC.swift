@@ -38,6 +38,7 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     @IBOutlet weak var POIuuidLbl: UILabel!
     @IBOutlet weak var POIActualPositionBtn: UIButton!
     @IBOutlet weak var POITypeView: UIView!
+    @IBOutlet weak var usernameLbl: UILabel!
     
     var pointtype : Int = 0
     var isNewPOI : Bool = true
@@ -46,7 +47,7 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     
-    var isOwner = true
+    var isOwner:Bool = false
     
     // keyboard to hold frame size
     var keyboard = CGRect()
@@ -58,6 +59,13 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // POI belongs to current user
+        if usernameLbl.text?.lowercased() == PFUser.current()?.username?.lowercased() {
+            isOwner = true
+        } else {
+            isOwner = false
+        }
 
         // height of navigationbar
         let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
@@ -103,6 +111,7 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         let frameSecond = CGRect(x: self.view.frame.size.width / 2 - 131 + 100, y: height - 200 + tabbarheight, width: 162, height: 17);
         let secondRadioButton = createRadioButton(frame: frameSecond, title: point_interest_str, color: UIColor(colorLiteralRed: 1.00, green: 0.361, blue: 0.145, alpha: 1.00))
         firstRadioButton.isEnabled = true
+        
         // second radio button
         secondRadioButton.isIconOnRight = false
         
@@ -210,7 +219,11 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         POILatLongFrameView.translatesAutoresizingMaskIntoConstraints = false
         POIActualPositionBtn.translatesAutoresizingMaskIntoConstraints = false
         POITypeView.translatesAutoresizingMaskIntoConstraints = false
+        usernameLbl.translatesAutoresizingMaskIntoConstraints = false
 
+        // hide username label
+        usernameLbl.isHidden = true
+        
         // longlat view constraints alignement
         POILatLongFrameView.layer.cornerRadius = 5.0
         POILatLongFrameView.layer.masksToBounds = true

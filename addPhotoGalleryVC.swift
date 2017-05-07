@@ -24,42 +24,8 @@ class addPhotoGalleryVC: UIViewController, UIImagePickerControllerDelegate, UINa
         
         super.viewDidLoad()
         
-        // constraints setting
-        pcImg.translatesAutoresizingMaskIntoConstraints = false
-        removeBtn.translatesAutoresizingMaskIntoConstraints = false
-        saveBtn.translatesAutoresizingMaskIntoConstraints = false
-        
-        let navheight = Int((self.navigationController?.navigationBar.frame.height)!) + Int(UIApplication.shared.statusBarFrame.size.height)
-        
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-(\(navheight + 15))-[picture(\(pictureWidth))]-10-[removebtn(30)]",
-            options: [],
-            metrics: nil, views: ["picture":pcImg, "removebtn":removeBtn]))
-        
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[savebtn]-10-|",
-            options: [],
-            metrics: nil, views: ["savebtn":saveBtn]))
-       
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-[picture]-|",
-            options: [],
-            metrics: nil, views: ["picture":pcImg]))
-       
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-[removebtn]-|",
-            options: [],
-            metrics: nil, views: ["removebtn":removeBtn]))
-
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-[savebtn]-|",
-            options: [],
-            metrics: nil, views: ["savebtn":saveBtn]))
-        
-        
         // title label at the top
         self.navigationItem.title = new_snapshot_str.uppercased()
-        self.navigationController?.navigationBar.topItem?.title = back_str
         
         // disable save btn by default
         saveBtn.isEnabled = false
@@ -86,13 +52,48 @@ class addPhotoGalleryVC: UIViewController, UIImagePickerControllerDelegate, UINa
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // call alignement func
+        alignement()
+    }
     
     // preload function
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func alignement() {
+        let width = self.view.frame.size.width
+        let height = self.view.frame.size.height
         
-        // call alignement func
-        // alignement()
+        // constraints setting
+        pcImg.translatesAutoresizingMaskIntoConstraints = false
+        removeBtn.translatesAutoresizingMaskIntoConstraints = false
+        saveBtn.translatesAutoresizingMaskIntoConstraints = false
+        
+        let navheight = (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
+        
+        let gap = height - (navheight + 15 + pictureWidth + 10 + 30 + 10 + (width / 8) + tabbarheight) - 1
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-(\(navheight + 15))-[picture(\(pictureWidth))]-10-[removebtn(30)]-10-[savebtn(\(width / 8))]-(\(gap))-|",
+            options: [],
+            metrics: nil, views: ["picture":pcImg, "removebtn":removeBtn, "savebtn":saveBtn]))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-[picture]-|",
+            options: [],
+            metrics: nil, views: ["picture":pcImg]))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-[removebtn]-|",
+            options: [],
+            metrics: nil, views: ["removebtn":removeBtn]))
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-0-[savebtn]-0-|",
+            options: [],
+            metrics: nil, views: ["savebtn":saveBtn]))
     }
     
     // func to call PickerViewController

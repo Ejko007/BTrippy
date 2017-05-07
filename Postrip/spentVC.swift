@@ -45,10 +45,11 @@ class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var placeholderLbl = UILabel()
     
+    var isOwner:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var isOwner = false
         if PFUser.current()?.username!.lowercased() == username.lowercased() {
             isOwner = true
         }
@@ -56,21 +57,21 @@ class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         // hide keyboard tap
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardTap))
         hideTap.numberOfTapsRequired = 1
-        self.view.isUserInteractionEnabled = true
+        self.view.isUserInteractionEnabled = isOwner
         self.view.addGestureRecognizer(hideTap)
         
         // hide datepicker tap
         let hideDatePicker = UITapGestureRecognizer(target: self, action: #selector(spentVC.tapFunction))
-        spentDateLbl.isUserInteractionEnabled = true
+        spentDateLbl.isUserInteractionEnabled = isOwner
         spentDateLbl.addGestureRecognizer(hideDatePicker)
 
         // Create a navigation item with a title
         self.navigationItem.title = spent_str.uppercased()
 
         // append accept button to the left
-        let editBtn = UIBarButtonItem(image: UIImage(named: "accept.png"), style: .plain, target: self, action: #selector(saveTapped))
-        navigationItem.rightBarButtonItem = editBtn
-        editBtn.tintColor = .white
+        let acceptBtn = UIBarButtonItem(image: UIImage(named: "accept.png"), style: .plain, target: self, action: #selector(saveTapped))
+        navigationItem.rightBarButtonItem = acceptBtn
+        acceptBtn.tintColor = .white
         
         // currency button frame setting
         spentCurrencyBtn.backgroundColor = .clear
@@ -222,11 +223,11 @@ class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         // show edit button for current user post only
         if isOwner {
-            self.navigationItem.rightBarButtonItems = [editBtn]
-            editBtn.isEnabled = true
+            self.navigationItem.rightBarButtonItems = [acceptBtn]
+            acceptBtn.isEnabled = true
         } else {
             self.navigationItem.rightBarButtonItems = []
-            editBtn.isEnabled = false
+            acceptBtn.isEnabled = false
         }
         
         // spent amount field
@@ -234,7 +235,7 @@ class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         // date picker hide or show
         spentDatePicker.isUserInteractionEnabled = isOwner
-        spentDatePicker.isHidden = !isOwner
+        // spentDatePicker.isHidden = !isOwner
         spentDatePicker.isHidden = true
         
         getSpents()
@@ -431,8 +432,10 @@ class spentVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func tapFunction(sender:UITapGestureRecognizer) {
-        spentDatePicker.isHidden = !spentDatePicker.isHidden
-        self.view.endEditing(true)
+        if isOwner {
+            spentDatePicker.isHidden = !spentDatePicker.isHidden
+            self.view.endEditing(true)
+        }
     }
     
     

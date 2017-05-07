@@ -49,18 +49,6 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         // title label at the top
         self.navigationItem.title = photogallery_str.uppercased()
 
-        // new photo button
-        let newBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPhoto))
-        
-        // show new button for current user post only
-        if PFUser.current()?.username == self.username.lowercased() {
-            self.navigationItem.rightBarButtonItems = [newBtn]
-            newBtn.isEnabled = true
-        } else {
-            self.navigationItem.rightBarButtonItems = []
-            newBtn.isEnabled = false
-        }
-        
         pageView.translatesAutoresizingMaskIntoConstraints = false
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         photoCollectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -72,14 +60,16 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // constraints
         // vertical
-        let navheight = Int((self.navigationController?.navigationBar.frame.height)!) + Int(UIApplication.shared.statusBarFrame.size.height)
+        let navheight = (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
+        
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-(\(navheight))-[contentview]-0-|",
+            withVisualFormat: "V:|-(\(navheight))-[contentview]-(\(tabbarheight))-|",
             options: [],
             metrics: nil, views: ["contentview":contentView]))
         
         self.contentView.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-0-[pageview(200)]-(-37)-[pagecontrol(37)]-15-[photocollectlabel(30)]-(-15)-[collectionview]-|",
+            withVisualFormat: "V:|-0-[pageview(200)]-(-37)-[pagecontrol(37)]-5-[photocollectlabel(30)]-(-10)-[collectionview]-|",
             options: [],
             metrics: nil, views: ["pageview":pageView, "pagecontrol":pageControl, "photocollectlabel":photoCollectionLabel, "collectionview":photoCollectionView]))
        
@@ -116,6 +106,22 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
         uuid.isHidden = true
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        // new photo button
+        let newBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPhoto))
+        
+        // show new button for current user post only
+        if PFUser.current()?.username == self.username.lowercased() {
+            self.navigationItem.rightBarButtonItems = [newBtn]
+            newBtn.isEnabled = true
+        } else {
+            self.navigationItem.rightBarButtonItems = []
+            newBtn.isEnabled = false
+        }
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -316,6 +322,12 @@ class HomeViewController: UIViewController, UIGestureRecognizerDelegate {
             galleryViewController.closedCompletion = { print("CLOSED") }
             galleryViewController.swipedToDismissCompletion = { print("SWIPE-DISMISSED") }
             
+            if PFUser.current()?.username == self.username.lowercased() {
+                galleryViewController.isOwner = true
+            } else {
+                galleryViewController.isOwner = false
+            }
+
             galleryViewController.landedPageAtIndexCompletion = { index in
                 
                 print("LANDED AT INDEX: \(index)")
