@@ -9,12 +9,11 @@
 import UIKit
 import Parse
 
+var username4post = String()
+var uuid4post = String()
+
 class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
-    
-    // delegating user name from other views
-    var username = String()
-    var uuid = String()
-    
+        
     enum TabIndex : Int {
         case firstChildTab = 0
         case secondChildTab = 1
@@ -24,8 +23,6 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
     
     lazy var firstChildTabVC: UIViewController? = {
         let firstChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "tripMapVC") as! tripMapVC
-        firstChildTabVC.username = self.usernamestr.text!
-        firstChildTabVC.uuid = self.uuidstr.text!
         return firstChildTabVC
     }()
     
@@ -33,11 +30,9 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "itineraryVC") as! itineraryVC
         return secondChildTabVC
     }()
-
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var segmentedControl: TabySegmentedControl!
-    @IBOutlet weak var usernamestr: UILabel!
-    @IBOutlet weak var uuidstr: UILabel!
     
     override func viewDidLoad() {
         
@@ -54,15 +49,7 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         // add contraints
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        usernamestr.translatesAutoresizingMaskIntoConstraints = false
-        uuidstr.translatesAutoresizingMaskIntoConstraints = false
-        
-        // hide delegated vaviables { uuid and username }
-        usernamestr.text = username
-        uuidstr.text = uuid
-        usernamestr.isHidden = true
-        uuidstr.isHidden = true
-        
+                
         // constraints settings
         self.view.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "V:|-(\(navheight))-[segmentcontrol(20)]-5-[mainview]-(\(tabbarheight))-|",
@@ -94,7 +81,7 @@ class tripMapMasterVC: UIViewController, UITabBarControllerDelegate {
         let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(edit))
         
         // show edit button for current user post only
-        if PFUser.current()?.username == self.username.lowercased() {
+        if PFUser.current()?.username?.lowercased() == username4post.lowercased() {
             self.navigationItem.rightBarButtonItems = [editBtn]
             editBtn.isEnabled = true
         } else {

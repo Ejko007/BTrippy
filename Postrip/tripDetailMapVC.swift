@@ -98,7 +98,6 @@ class tripDetailMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDel
         longpressGestureRecognizer.minimumPressDuration = 0.3
         mapView.addGestureRecognizer(longpressGestureRecognizer)
 
-        
     }
     
     // pin procedure to pin location on map

@@ -136,4 +136,5 @@ let forgotten_password_str = "Zapomenuté heslo?"
 let account_already_exist_str = "Účet již existuje?"
 let set_str = "Nastavit"
 let email_str = "Email"
+let poi_desc_str = "Komentář"
 

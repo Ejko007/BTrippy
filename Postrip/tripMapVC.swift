@@ -35,8 +35,6 @@ class tripMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
     var annotations = [MKPointAnnotation]()
     
     // delegating user name from other views
-    var username = String()
-    var uuid = String()
     
     var startLocation:CLLocation!
     var lastLocation: CLLocation!
@@ -53,18 +51,6 @@ class tripMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         MapViewLocationManager.delegate = self
         MapViewLocationManager.startUpdatingLocation()
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
-        
-        // new edit button
-        let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(edit))
-
-        // show edit button for current user post only
-        if PFUser.current()?.username == self.username.lowercased() {
-            self.navigationItem.rightBarButtonItems = [editBtn]
-            editBtn.isEnabled = true
-        } else {
-            self.navigationItem.rightBarButtonItems = []
-            editBtn.isEnabled = false
-        }
         
         // allow constraints
         mapView.translatesAutoresizingMaskIntoConstraints = false

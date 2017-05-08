@@ -33,11 +33,11 @@ class tripDetailMapPOIListVC: UITableViewController {
         // navigation bar title
         self.navigationItem.title = trip_POI_str.uppercased()
         
-        // Create right navigation item - add POI button
-        let addPOIBtn = UIBarButtonItem(image: UIImage(named: "add-poi.png"), style: .plain, target: self, action: #selector(addPOI))
-        self.navigationItem.rightBarButtonItem = addPOIBtn
-        self.navigationItem.leftBarButtonItem?.title = update_post_str
-        addPOIBtn.tintColor = .white
+        // Create right navigation item - edit POI button
+        // let editBtn = UIBarButtonItem(image: UIImage(named: "edit.png"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(addPOI))
+        // let addPOIBtn = UIBarButtonItem(image: UIImage(named: "add-poi.png"), style: .plain, target: self, action: #selector(addPOI))
+        // self.navigationItem.rightBarButtonItem = editBtn
+        // editBtn.tintColor = .white
         
         // load poi records
         loadPOI()
@@ -45,8 +45,11 @@ class tripDetailMapPOIListVC: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
-        // allow edit feature
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        // allow edit feature for owner only
+        if username4post.lowercased() == PFUser.current()?.username?.lowercased() {
+            self.navigationItem.rightBarButtonItem?.title = update_post_str
+            self.navigationItem.rightBarButtonItem = self.editButtonItem
+        }
         
         // delegation settings
         tableView.delegate = self

@@ -38,7 +38,6 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
     @IBOutlet weak var POIuuidLbl: UILabel!
     @IBOutlet weak var POIActualPositionBtn: UIButton!
     @IBOutlet weak var POITypeView: UIView!
-    @IBOutlet weak var usernameLbl: UILabel!
     
     var pointtype : Int = 0
     var isNewPOI : Bool = true
@@ -61,7 +60,7 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         super.viewDidLoad()
 
         // POI belongs to current user
-        if usernameLbl.text?.lowercased() == PFUser.current()?.username?.lowercased() {
+        if username4post.lowercased() == PFUser.current()?.username?.lowercased() {
             isOwner = true
         } else {
             isOwner = false
@@ -90,9 +89,11 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         POIuuidLbl.isHidden = true
         
         // add save button to the right
-        let saveBtn = UIBarButtonItem(image: UIImage(named: "accept.png"), style: .plain, target: self, action: #selector(POISaveBtn_Clicked))
-        self.navigationItem.rightBarButtonItem = saveBtn
-        saveBtn.tintColor = .white
+        if isOwner {
+            let saveBtn = UIBarButtonItem(image: UIImage(named: "accept.png"), style: .plain, target: self, action: #selector(POISaveBtn_Clicked))
+            self.navigationItem.rightBarButtonItem = saveBtn
+            saveBtn.tintColor = .white
+        }
         
         // check notification of keyboard - to show or not
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
@@ -179,9 +180,17 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         secondRadioButton.contentHorizontalAlignment = .center
         firstRadioButton.contentHorizontalAlignment = .center
         firstRadioButton.otherButtons = [secondRadioButton]
+        
+        // manage enabelity according to owner status
         POITypeBtn.isUserInteractionEnabled = isOwner
         firstRadioButton.isUserInteractionEnabled = isOwner
         secondRadioButton.isUserInteractionEnabled = isOwner
+        POIActualPositionBtn.isUserInteractionEnabled = isOwner
+        POILongitudeTxt.isEnabled = isOwner
+        POILatitudeTxt.isEnabled = isOwner
+        POICommentTxtView.isEditable = isOwner
+        POIDescTxt.isEnabled = isOwner
+        POINameTxt.isEnabled = isOwner
         
         // localize button and label text
         POINameLbl.text = poi_name_str
@@ -219,10 +228,6 @@ class tripDetailMapPOI4MapVC: UIViewController, UINavigationBarDelegate, UITabBa
         POILatLongFrameView.translatesAutoresizingMaskIntoConstraints = false
         POIActualPositionBtn.translatesAutoresizingMaskIntoConstraints = false
         POITypeView.translatesAutoresizingMaskIntoConstraints = false
-        usernameLbl.translatesAutoresizingMaskIntoConstraints = false
-
-        // hide username label
-        usernameLbl.isHidden = true
         
         // longlat view constraints alignement
         POILatLongFrameView.layer.cornerRadius = 5.0

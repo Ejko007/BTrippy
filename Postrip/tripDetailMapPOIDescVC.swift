@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 var descriptionuuid = String()
 
@@ -15,10 +16,22 @@ class tripDetailMapPOIDescVC: UIViewController {
     @IBOutlet weak var tripDetailDescLabel: UILabel!
     @IBOutlet weak var tripDetailTxtView: UITextView!
     @IBOutlet weak var tripDetailDescSaveBtn: UIButton!
-    
+
+    var isOwner:Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+
+        // POI belongs to current user
+        if username4post.lowercased() == PFUser.current()?.username?.lowercased() {
+            isOwner = true
+        } else {
+            isOwner = false
+        }
+
+        // navigation bar title
+        self.navigationItem.title = poi_desc_str.uppercased()
+        
         // hide keyboard tap
         let hideTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardTap))
         hideTap.numberOfTapsRequired = 1
@@ -30,15 +43,29 @@ class tripDetailMapPOIDescVC: UIViewController {
         tripDetailTxtView.layer.cornerRadius = 5.0
         tripDetailTxtView.clipsToBounds = true
         
-        // localize button and label text
+        // disable save btn by default
+        tripDetailDescSaveBtn.isEnabled = false
+        tripDetailDescSaveBtn.backgroundColor = .lightGray
+        tripDetailDescSaveBtn.setTitle(save_str, for: .normal)
+        tripDetailDescSaveBtn.tintColor = .white
+        
+        // localization of labels
         tripDetailDescLabel.text = description_str
-        tripDetailDescSaveBtn.setTitle(save_str,for: .normal)
         
         // add constraints        
         tripDetailDescLabel.translatesAutoresizingMaskIntoConstraints = false
         tripDetailTxtView.translatesAutoresizingMaskIntoConstraints = false
         tripDetailDescSaveBtn.translatesAutoresizingMaskIntoConstraints = false
         
+        // height of navigationbar
+        let width = self.view.frame.size.width
+        let tabbarheight = (self.tabBarController?.tabBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
+        
+        self.view.addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-(\(tabbarheight + 10))-[desclbl]-10-[desctxtview]-10-[savebtn(\(width / 8))]-|",
+            options: [],
+            metrics: nil, views: ["desclbl":tripDetailDescLabel,"desctxtview":tripDetailTxtView, "savebtn":tripDetailDescSaveBtn]))
+
         self.view.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-10-[desclbl]-10-|",
             options: [],
@@ -50,14 +77,9 @@ class tripDetailMapPOIDescVC: UIViewController {
             metrics: nil, views: ["desctxtview":tripDetailTxtView]))
         
         self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-10-[savebtn]-10-|",
+            withVisualFormat: "H:|-0-[savebtn]-0-|",
             options: [],
             metrics: nil, views: ["savebtn":tripDetailDescSaveBtn]))
-        
-        self.view.addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: "V:|-10-[desclbl]-10-[desctxtview]-10-[savebtn(30)]-10-|",
-            options: [],
-            metrics: nil, views: ["desclbl":tripDetailDescLabel,"desctxtview":tripDetailTxtView, "savebtn":tripDetailDescSaveBtn]))
         
         // load data
         tripDetailTxtView.text = descriptionuuid

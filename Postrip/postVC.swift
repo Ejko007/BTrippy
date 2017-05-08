@@ -732,10 +732,9 @@ class postVC: UITableViewController {
             self.navigationController!.pushViewController(mapViewController, animated: true)
 
             // delegate uuid for displaying map
-            //
-            mapViewController.username = (self.usernameArray.last?.lowercased())!
-            mapViewController.uuid = self.uuidArray.last!
-
+            username4post = self.usernameArray.last!.lowercased()
+            uuid4post = self.uuidArray.last!
+            
             // self.present(mapViewController, animated:true, completion:nil)
         }
         

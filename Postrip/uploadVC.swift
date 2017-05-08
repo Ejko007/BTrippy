@@ -196,7 +196,7 @@ class uploadVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         let width = self.view.frame.size.width
         
         let navheight = (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height
-        let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
+        // let tabbarheight = (self.tabBarController?.tabBar.frame.height)!
         
         pcImg.translatesAutoresizingMaskIntoConstraints = false
         titleTxt.translatesAutoresizingMaskIntoConstraints = false

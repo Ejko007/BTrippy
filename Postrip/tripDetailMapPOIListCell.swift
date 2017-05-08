@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class tripDetailMapPOIListCell: UITableViewCell {
     
@@ -27,7 +28,6 @@ class tripDetailMapPOIListCell: UITableViewCell {
 
         // add contraints
         addConstraints()
-        
     }
     
     // constraints
@@ -62,7 +62,6 @@ class tripDetailMapPOIListCell: UITableViewCell {
         // configure backgroud color of POI name
         POIName.backgroundColor = UIColor(red: 74 / 255, green: 144 / 255, blue: 226 / 255, alpha: 30 / 100)
         POIName.tintColor = .black
-        
         
         // localization of label text
         LatitudeLbl.text = latitude_str
