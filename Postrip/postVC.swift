@@ -36,7 +36,9 @@ class postVC: UITableViewController {
     var ratingArray = [Double]()
     
     var publishedArray = [Bool]()
-        
+    
+    private var notifications = [(String, String)]()
+    
     // default finction
     override func viewDidLoad() {
         
@@ -685,6 +687,14 @@ class postVC: UITableViewController {
         self.tableView.reloadData()
     }
     
+    func addNotification(title: String, body: String) {
+        DispatchQueue.main.async {
+            let indexPath = [IndexPath(item: self.notifications.count, section: 0)]
+            self.notifications.append((title, body))
+            self.tableView.insertRows(at: indexPath, with: .bottom)
+        }
+    }
+
     // configuring expanding menu
     fileprivate func configureExpandingMenuButton() {
         

@@ -47,19 +47,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .black
         
         // push notification enablement
+        application.applicationIconBadgeNumber = 0  // clear badge when application is launched
+        
         if #available(iOS 10.0, *) {
-            let center = UNUserNotificationCenter.current()
-            let options: UNAuthorizationOptions = [.alert, .badge, .sound]
-            center.requestAuthorization(options: options, completionHandler: { authorized, error in
-                if authorized {
-                    application.registerForRemoteNotifications()
+            if let notification = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? [String: AnyObject] {
+                    window?.rootViewController?.present(ViewController(), animated: true, completion: nil)
+                    notificationReceived(notification: notification as [String : AnyObject])
+                } else {
+                    DispatchQueue.main.async {
+                        let center = UNUserNotificationCenter.current()
+                        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+                        center.requestAuthorization(options: options, completionHandler: { authorized, error in
+                            if authorized {
+                                application.registerForRemoteNotifications()
+                            }
+                        })
+                    }
                 }
-            })
         }
-    
         return true
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("APNs device token: \(deviceTokenString)")
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+        print("APNs registration failed: \(error)")
+    }
+    
 
+    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
+        
+        print("Push notification received: \(data)")
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -72,6 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        application.applicationIconBadgeNumber = 0; // Clear badge when app is or resumed
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -89,6 +115,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sourceApplication : String? = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
         return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: nil)
     }
+    
+    
+    func notificationReceived(notification: [String:AnyObject]) {
+        let viewController = window?.rootViewController
+        let view = viewController as? postVC
+        view?.addNotification(title: getAlert(notification: notification ).0, body: getAlert(notification: notification ).1)
+        
+    }
+    
+    private func getAlert(notification: [String:AnyObject]) -> (String, String) {
+        let aps = notification["aps"] as? [String:AnyObject]
+        let alert = aps?["alert"] as? [String:AnyObject]
+        let title = alert?["title"] as? String
+        let body = alert?["body"] as? String
+        return (title ?? "-", body ?? "-")
+    }
 
     func login() {
         
@@ -102,5 +144,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = myTabBar
         }
     }
+            
 }
 
